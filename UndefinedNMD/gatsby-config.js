@@ -32,7 +32,7 @@ module.exports = {
       resolve: `gatsby-source-firebase`,
       options: {
         // point to the firebase private key downloaded
-        credential: require("./firebase-key.json"),
+        // credential: require("./firebase-key.json"),
 
         // your firebase database root url
         databaseURL: "https://reactjs-training.firebaseio.com",
