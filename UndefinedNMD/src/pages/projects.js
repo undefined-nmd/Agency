@@ -1,21 +1,26 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
+// import Image from "../components/image"
 import SEO from "../components/seo"
 
-const AssignmentsPage = () => (
+const ProjectsPage = () => (
   <Layout>
     <SEO title="Assignments" />
         <div className={'hero-img-detail'}>
-            <h1 className="project-title">Our current assignments</h1>
+            <h1 className="project-title">Snak the museum</h1>
             <div className={'subtitles-detail'}>
                 <h5 className={'subtitle-text-detail'}>By undefined</h5>
                 <div className={'line-detail'}></div>
                 <h5 className={'date-text-detail'}>2019</h5>
             </div>
-            <div>HERE KOMeS DE NAV</div>
+            <nav>
+                <a href="">Team</a>
+                <a href="">Contact</a>
+                <a href="">About</a>
+                <a href="">Projects</a>
+            </nav>
             <div className={'content-div-detail'}>
                 <div className={'intro-div-detail'}>
                     <p className={'intro-text-detail'}>
@@ -41,4 +46,4 @@ const AssignmentsPage = () => (
   </Layout>
 )
 
-export default AssignmentsPage
+export default ProjectsPage
