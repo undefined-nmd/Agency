@@ -56,16 +56,7 @@
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
-}
-
-.toggle-nav:hover .nav-line-top {
-    width: 45px;
-    transition: 0.2s ease-in-out;
-}
-
-.toggle-nav:hover .nav-line-bottom {
-    width: 30px;
-    transition: 0.2s ease-in-out;
+    width: 20%;
 }
 
 .nav-line-top {
@@ -82,8 +73,13 @@
     transition: 0.2s ease-in-out;
 }
 
-.nav-line-bottom:hover {
-    width: 30px;
+.toggle-nav:hover .nav-line-top {
+    width: 45px;
+    transition: 0.2s ease-in-out;
+}
+
+.toggle-nav:hover .nav-line-bottom {
+    margin-left: -5px;
 }
 
 .brand-title {
