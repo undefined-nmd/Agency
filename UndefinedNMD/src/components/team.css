@@ -1,12 +1,13 @@
 .team-list-div {
-    background-color: red;
+    background-color: white;
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
+    padding: 5vh 0 0 0;
 }
 
 .person-div {
-    width: 25%;
-    background-color: blue;
+    width: 20%;
+    margin: 2vh 2.5%;
 }

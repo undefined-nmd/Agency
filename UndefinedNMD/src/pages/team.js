@@ -8,17 +8,27 @@ import SEO from "../components/seo"
 import {getFirebase} from "../components/firebase-config";
 
 class AssignmentsPage extends Component {
+    constructor(props) {
+        super(props);
+        // change code below this line
+        this.state = {
+            peoples: [],
+        };
+    }
 
     componentDidMount() {
         const lazyApp = import('firebase/app')
         const lazyDatabase = import('firebase/database')
 
         Promise.all([lazyApp, lazyDatabase]).then(([firebase]) => {
+            let peeps = []
             const database = getFirebase(firebase).database()
             database.ref('peoples').on('value', (snapshot) => {
                 snapshot.forEach((childSnapshot) => {
                     console.log(childSnapshot.val())
+                    peeps.push(childSnapshot.val())
                 })
+                this.setState({peoples:peeps})
             })
         })
     }
@@ -38,30 +48,12 @@ class AssignmentsPage extends Component {
                     <div className={'content-div-detail'}>
                         <h1>This is our peoples</h1>
                         <div className={'team-list-div'}>
-                            <div className={'person-div'}>
-                                <h3 className={'person-name'}>Jonas Stasseyns</h3>
-                                <img className={'person-image'}/>
-                            </div>
-                            <div className={'person-div'}>
-                                <h3 className={'person-name'}>Jonas Stasseyns</h3>
-                                <img className={'person-image'}/>
-                            </div>
-                            <div className={'person-div'}>
-                                <h3 className={'person-name'}>Jonas Stasseyns</h3>
-                                <img className={'person-image'}/>
-                            </div>
-                            <div className={'person-div'}>
-                                <h3 className={'person-name'}>Jonas Stasseyns</h3>
-                                <img className={'person-image'}/>
-                            </div>
-                            <div className={'person-div'}>
-                                <h3 className={'person-name'}>Jonas Stasseyns</h3>
-                                <img className={'person-image'}/>
-                            </div>
-                            <div className={'person-div'}>
-                                <h3 className={'person-name'}>Jonas Stasseyns</h3>
-                                <img className={'person-image'}/>
-                            </div>
+                            {this.state && this.state.peoples && this.state.peoples.map((item, index) =>
+                                <div className={'person-div'} key={index}>
+                                    <h5 className={'person-name'}>{item.name}</h5>
+                                    <img src={'http://stasseynsjonas.be/api/profiles/' + item.image} className={'person-image'}/>
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>
