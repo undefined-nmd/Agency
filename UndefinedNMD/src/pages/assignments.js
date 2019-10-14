@@ -21,6 +21,7 @@ const AssignmentsPage = () => (
                     <p className={'intro-text-detail'}>
                         Here is a list of the current projects we are working on at undefined! This sentence has no purpose whatsoever, except maybe for filling this paragraph because one sentence is not quite useful for styling a p-tag.
                     </p>
+                    <h1>Main projects</h1>
                     <div className={'project-div'}>
                         <h1 className={'project-title'}>Agency website</h1>
                         <p className={'project-description'}>By the agency-website, we mean the actual website is our agency 'undefined', or, this website. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut nesciunt porro quibusdam ut. Architecto, corporis deserunt dolor doloribus inventore iusto omnis repellendus! Ad consequatur explicabo maxime quo sed unde vero!</p>
@@ -29,6 +30,11 @@ const AssignmentsPage = () => (
                         <h1 className={'project-title'}>Sleepwalking-project</h1>
                         <p className={'project-description'}>Another main-project of ours is the development of a solution to a sleepwalking child getting out of bed and jumping through their window. We are developing a solution that prevent this from happening.</p>
                     </div>
+                    <div className={'project-div'}>
+                        <h1 className={'project-title'}>Bario</h1>
+                        <p className={'project-description'}></p>
+                    </div>
+                    <h1>Side-projects</h1>
                 </div>
             </div>
         </div>

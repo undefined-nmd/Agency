@@ -1,0 +1,12 @@
+.team-list-div {
+    background-color: red;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.person-div {
+    width: 25%;
+    background-color: blue;
+}
