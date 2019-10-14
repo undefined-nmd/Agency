@@ -101,3 +101,34 @@ nav a:hover {
     width: 50%;
     display: block;
 }
+
+.contact-action {
+    margin: 120px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+    padding: 90px 0px;
+}
+
+.action-title {
+    font-weight: 100;
+    font-size: 150%;
+    margin-bottom: 50px;
+}
+
+.action-button {
+    background: #2C3CFF;
+    color: white;
+    padding: 10px 40px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.action-button:hover {
+    border-radius: 0px;
+    transition: 0.3s ease-in-out;
+}

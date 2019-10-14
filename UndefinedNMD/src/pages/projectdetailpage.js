@@ -63,7 +63,21 @@ const ProjectDetailPage = () => (
         className="project-image-sm"
       />
     </div>
-    <div className="main-container"></div>
+    <div className="main-container">
+    <div className="content-box">
+        <h3 className="project-subtitle">Services</h3>
+        <ul className="project-text">
+          <li>Brand identity</li>
+          <li>UI / UX design</li>
+          <li>Visual design</li>
+          <li>Development</li>
+        </ul>
+      </div>
+      <div className="contact-action">
+        <p className="action-title">Let us define your next project</p>
+        <a href="" className="action-button">Contact us</a>
+      </div>
+    </div>
   </Layout>
 )
 
