@@ -4,13 +4,12 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
-import "../components/assignments.css"
 
 const AssignmentsPage = () => (
   <Layout>
     <SEO title="Assignments" />
         <div className={'hero-img-detail'}>
-            <h1>Our current assignments</h1>
+            <h1 className="project-title">Our current assignments</h1>
             <div className={'subtitles-detail'}>
                 <h5 className={'subtitle-text-detail'}>By undefined</h5>
                 <div className={'line-detail'}></div>

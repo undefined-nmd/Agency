@@ -23,6 +23,7 @@
 
 .project-title {
     font-size: 650%;
+    color:white;
 }
 
 .subtitles {
@@ -30,11 +31,12 @@
     align-items: stretch;
     width: 80%;
     justify-content: space-between;
+    color: white;
 }
 
 .line {
     height: 1px;
     width: 65%;
-    background-color: black;
+    background-color: white;
     margin-top: 8px;
 }

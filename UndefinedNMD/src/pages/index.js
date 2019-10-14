@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
+import "../components/assignments.css"
 import SEO from "../components/seo"
 
 const IndexPage = () => (
@@ -11,7 +12,7 @@ const IndexPage = () => (
       <div className={'container'}>
           <div className={'hero-img'}>
               <div className={'hero-child'}>
-                  <h1>Snek the museum</h1>
+                  <h1 className="project-title">Snek the museum</h1>
                   <div className={'subtitles'}>
                       <h5 className={'subtitle-text'}>View project</h5>
                       <div className={'line'}></div>
