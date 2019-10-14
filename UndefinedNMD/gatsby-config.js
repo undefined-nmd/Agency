@@ -28,6 +28,24 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-source-mysql`,
+      options: {
+        connectionDetails: {
+          host: 'localhost',
+          user: 'root',
+          password: 'root',
+          database: 'undefined_agency'
+        },
+        queries: [
+          {
+            statement: 'SELECT * FROM people',
+            idFieldName: 'Code',
+            name: 'person'
+          }
+        ]
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
