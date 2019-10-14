@@ -8,21 +8,7 @@ import SEO from "../components/seo"
 const AssignmentsPage = () => (
   <Layout>
     <SEO title="Assignments" />
-      <div className={'container'}>
-          <div className={'hero-img'}>
-              <div className={'hero-child'}>
-                  <h1>Snek the museum</h1>
-                  <div className={'subtitles'}>
-                      <h5 className={'subtitle-text'}>View project</h5>
-                      <div className={'line'}></div>
-                      <h5 className={'date-text'}>2019</h5>
-                  </div>
-              </div>
-          </div>
-          <div className={'content-div'}>
 
-          </div>
-      </div>
   </Layout>
 )
 
