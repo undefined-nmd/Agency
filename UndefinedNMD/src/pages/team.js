@@ -14,6 +14,11 @@ class AssignmentsPage extends Component {
         this.state = {
             peoples: [],
         };
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick() {
+
     }
 
     componentDidMount() {
@@ -33,6 +38,8 @@ class AssignmentsPage extends Component {
         })
     }
 
+
+
     render() {
         return (
             <Layout>
@@ -48,10 +55,17 @@ class AssignmentsPage extends Component {
                     <div className={'content-div-detail'}>
                         <h1>This is our peoples</h1>
                         <div className={'team-list-div'}>
+                            {/*<div className={'nextbtn'} onClick={this.handleClick}>NEXT</div>*/}
                             {this.state && this.state.peoples && this.state.peoples.map((item, index) =>
                                 <div className={'person-div'} key={index}>
-                                    <h5 className={'person-name'}>{item.name}</h5>
-                                    <img src={'http://stasseynsjonas.be/api/profiles/' + item.image} className={'person-image'}/>
+                                    <div className={'person-img-div'}>
+                                        <img src={'http://stasseynsjonas.be/api/profiles/' + item.image} className={'person-image'}/>
+                                    </div>
+                                    <div className={'person-data-div'}>
+                                        <h1 className={'person-name'}>{item.name}</h1>
+                                        <div className={'stripe'}></div>
+                                        <h3 className={'person-title'}>{item.title}</h3>
+                                    </div>
                                 </div>
                             )}
                         </div>
