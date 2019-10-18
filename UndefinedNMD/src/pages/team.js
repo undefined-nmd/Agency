@@ -13,12 +13,30 @@ class AssignmentsPage extends Component {
         // change code below this line
         this.state = {
             peoples: [],
+            trigger: true,
         };
-        this.handleClick = this.handleClick.bind(this);
+        this.peIndex = 0;
+        this.nextPerson = this.nextPerson.bind(this);
+        this.prevPerson = this.prevPerson.bind(this);
     }
 
-    handleClick() {
-
+    nextPerson() {
+        console.log(this.peIndex)
+        this.peIndex++
+        this.setState({
+            trigger: true,
+        })
+        console.log(this.state.peoples[this.peIndex])
+        console.log(this.peIndex)
+    }
+    prevPerson() {
+        console.log(this.peIndex)
+        this.peIndex--
+        this.setState({
+            trigger: true,
+        })
+        console.log(this.state.peoples[this.peIndex])
+        console.log(this.peIndex)
     }
 
     componentDidMount() {
@@ -34,11 +52,10 @@ class AssignmentsPage extends Component {
                     peeps.push(childSnapshot.val())
                 })
                 this.setState({peoples:peeps})
+                console.log(this.state.peoples)
             })
         })
     }
-
-
 
     render() {
         return (
@@ -55,19 +72,32 @@ class AssignmentsPage extends Component {
                     <div className={'content-div-detail'}>
                         <h1>This is our peoples</h1>
                         <div className={'team-list-div'}>
-                            {/*<div className={'nextbtn'} onClick={this.handleClick}>NEXT</div>*/}
-                            {this.state && this.state.peoples && this.state.peoples.map((item, index) =>
-                                <div className={'person-div'} key={index}>
-                                    <div className={'person-img-div'}>
-                                        <img src={'http://stasseynsjonas.be/api/profiles/' + item.image} className={'person-image'}/>
-                                    </div>
-                                    <div className={'person-data-div'}>
-                                        <h1 className={'person-name'}>{item.name}</h1>
-                                        <div className={'stripe'}></div>
-                                        <h3 className={'person-title'}>{item.title}</h3>
-                                    </div>
+                            <div className={'nextbtn'} onClick={this.prevPerson}>Previous</div>
+                            <div className={'nextbtn'} onClick={this.nextPerson}>Next</div>
+
+                            <div className={'person-div'}>
+                                <div className={'person-img-div'}>
+                                    <img src={this.state.peoples[this.peIndex] ? 'http://stasseynsjonas.be/api/profiles/' + this.state.peoples[this.peIndex].image : 'http://stasseynsjonas.be/api/profiles/placeholder.jpg'} className={'person-image'}/>
                                 </div>
-                            )}
+                                <div className={'person-data-div'}>
+                                    <h1 className={'person-name'}>{this.state.peoples[this.peIndex] ? this.state.peoples[this.peIndex].name : 'Rendering...'}</h1>
+                                    <div className={'stripe'}></div>
+                                    <h3 className={'person-title'}>{this.state.peoples[this.peIndex] ? this.state.peoples[this.peIndex].title : 'Rendering...'}</h3>
+                                </div>
+                            </div>
+
+                            {/*{this.state && this.state.peoples && this.state.peoples.map((item, index) =>*/}
+                            {/*    <div className={'person-div'} key={index}>*/}
+                            {/*        <div className={'person-img-div'}>*/}
+                            {/*            <img src={'http://stasseynsjonas.be/api/profiles/' + item.image} className={'person-image'}/>*/}
+                            {/*        </div>*/}
+                            {/*        <div className={'person-data-div'}>*/}
+                            {/*            <h1 className={'person-name'}>{item.name}</h1>*/}
+                            {/*            <div className={'stripe'}></div>*/}
+                            {/*            <h3 className={'person-title'}>{item.title}</h3>*/}
+                            {/*        </div>*/}
+                            {/*    </div>*/}
+                            {/*)}*/}
                         </div>
                     </div>
                 </div>
