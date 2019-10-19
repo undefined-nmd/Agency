@@ -132,3 +132,32 @@ nav a:hover {
     border-radius: 0px;
     transition: 0.3s ease-in-out;
 }
+
+footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-container-left ul li {
+    font-size: 150%;
+    line-height: 30px;
+}
+
+.footer-info-general {
+    font-weight: 100;
+    font-size: 80%;
+}
+
+span.footer-info-general {
+    color: black;
+    font-weight: 300;
+    font-size: 110%;
+}
+
+.footer-info-general:nth-last-of-type(4) {
+   margin-top: 30px;
+}
+
+.blank-div {
+    width: 30%;
+}

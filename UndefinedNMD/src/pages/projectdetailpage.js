@@ -77,6 +77,24 @@ const ProjectDetailPage = () => (
         <p className="action-title">Let us define your next project</p>
         <a href="" className="action-button">Contact us</a>
       </div>
+      <footer>
+          <div className="footer-container-left">
+            <ul>
+              <li>Contact</li>
+              <li>Social</li>
+            </ul>
+          </div>
+          <ul className="footer-container-center">
+            <li className="footer-info-general"><span className="footer-info-general">info@arteveldehs.be / 09 234 86 00</span></li>
+            <li className="footer-info-general"><span className="footer-info-general">Instagram / Facebook / LinkedIn / Twitter</span></li>
+            <li className="footer-info-general">Hoogpoort 15</li>
+            <li className="footer-info-general">9000 Gent</li>
+            <li className="footer-info-general">ONnr: 0474.120.360</li>
+            <li className="footer-info-general">BTWnr: BTW BE 0474.120.360</li>
+          </ul>
+          <div className="blank"></div>
+          <div className="undefined-copyright">_defined</div>
+        </footer>
     </div>
   </Layout>
 )
