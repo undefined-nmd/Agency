@@ -5,14 +5,14 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import '../components/team.css'
 import SEO from "../components/seo"
-import {getFirebase} from "../components/firebase-config";
+import { getFirebase } from "../components/firebase-config";
 
-class AssignmentsPage extends Component {
+class TeamPage extends Component {
     constructor(props) {
         super(props);
         // change code below this line
         this.state = {
-            peoples: [],
+            people: [],
             trigger: true,
         };
         this.peIndex = 0;
@@ -26,7 +26,7 @@ class AssignmentsPage extends Component {
         this.setState({
             trigger: true,
         })
-        console.log(this.state.peoples[this.peIndex])
+        console.log(this.state.people[this.peIndex])
         console.log(this.peIndex)
     }
     prevPerson() {
@@ -35,7 +35,7 @@ class AssignmentsPage extends Component {
         this.setState({
             trigger: true,
         })
-        console.log(this.state.peoples[this.peIndex])
+        console.log(this.state.people[this.peIndex])
         console.log(this.peIndex)
     }
 
@@ -46,13 +46,13 @@ class AssignmentsPage extends Component {
         Promise.all([lazyApp, lazyDatabase]).then(([firebase]) => {
             let peeps = []
             const database = getFirebase(firebase).database()
-            database.ref('peoples').on('value', (snapshot) => {
+            database.ref('people').on('value', (snapshot) => {
                 snapshot.forEach((childSnapshot) => {
                     console.log(childSnapshot.val())
                     peeps.push(childSnapshot.val())
                 })
-                this.setState({peoples:peeps})
-                console.log(this.state.peoples)
+                this.setState({ people: peeps })
+                console.log(this.state.people)
             })
         })
     }
@@ -70,23 +70,23 @@ class AssignmentsPage extends Component {
                     </div>
                     <div>HERE KOMeS DE NAV</div>
                     <div className={'content-div-detail'}>
-                        <h1>This is our peoples</h1>
+                        <h1>This is our people</h1>
                         <div className={'team-list-div'}>
                             <div className={'nextbtn'} onClick={this.prevPerson}>Previous</div>
                             <div className={'nextbtn'} onClick={this.nextPerson}>Next</div>
 
                             <div className={'person-div'}>
                                 <div className={'person-img-div'}>
-                                    <img src={this.state.peoples[this.peIndex] ? 'http://stasseynsjonas.be/api/profiles/' + this.state.peoples[this.peIndex].image : 'http://stasseynsjonas.be/api/profiles/placeholder.jpg'} className={'person-image'}/>
+                                    <img src={this.state.people[this.peIndex] ? 'http://stasseynsjonas.be/api/profiles/' + this.state.people[this.peIndex].image : 'http://stasseynsjonas.be/api/profiles/placeholder.jpg'} className={'person-image'} />
                                 </div>
                                 <div className={'person-data-div'}>
-                                    <h1 className={'person-name'}>{this.state.peoples[this.peIndex] ? this.state.peoples[this.peIndex].name : 'Rendering...'}</h1>
+                                    <h1 className={'person-name'}>{this.state.people[this.peIndex] ? this.state.people[this.peIndex].name : 'Rendering...'}</h1>
                                     <div className={'stripe'}></div>
-                                    <h3 className={'person-title'}>{this.state.peoples[this.peIndex] ? this.state.peoples[this.peIndex].title : 'Rendering...'}</h3>
+                                    <h3 className={'person-title'}>{this.state.people[this.peIndex] ? this.state.people[this.peIndex].title : 'Rendering...'}</h3>
                                 </div>
                             </div>
 
-                            {/*{this.state && this.state.peoples && this.state.peoples.map((item, index) =>*/}
+                            {/*{this.state && this.state.people && this.state.people.map((item, index) =>*/}
                             {/*    <div className={'person-div'} key={index}>*/}
                             {/*        <div className={'person-img-div'}>*/}
                             {/*            <img src={'http://stasseynsjonas.be/api/profiles/' + item.image} className={'person-image'}/>*/}
@@ -106,4 +106,4 @@ class AssignmentsPage extends Component {
     }
 }
 
-export default AssignmentsPage
+export default TeamPage
