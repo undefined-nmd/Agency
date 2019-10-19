@@ -1,12 +1,48 @@
 .team-list-div {
-    background-color: red;
+    background-color: white;
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
     justify-content: space-between;
 }
 
 .person-div {
-    width: 25%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.person-img-div {
+    width: 50%;
+    padding: 5vw;
+}
+
+.person-img-div img {
+    height: 80vh;
+}
+
+.person-data-div {
+    width: 50%;
+    padding: 10vw;
+}
+
+.person-name {
+    font-size: 3vw;
+}
+
+.stripe {
+    border-bottom: 1px solid black;
+    width: 20%;
+}
+
+.person-title {
+    margin-top: 3vh;
+}
+
+.nextbtn {
     background-color: blue;
 }

@@ -19,9 +19,9 @@ const ProjectDetailPage = () => (
         </div>
       </div>
       <nav>
-        <a href="">Team</a>
-        <a href="">Contact</a>
-        <a href="">About</a>
+        <a href="/team">Team</a>
+        <a href="/contact">Contact</a>
+        <a href="/about">About</a>
         <a href="">Projects</a>
       </nav>
     </div>
