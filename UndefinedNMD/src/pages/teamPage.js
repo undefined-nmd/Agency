@@ -12,7 +12,7 @@ class TeamPage extends Component {
         super(props);
         // change code below this line
         this.state = {
-            people: [],
+            people: [1, 2, 3],
             trigger: true,
         };
         this.peIndex = 0;
@@ -22,7 +22,7 @@ class TeamPage extends Component {
 
     nextPerson() {
         console.log(this.peIndex)
-        console.log('length: ' + this.state.peoples.length)
+        console.log('length: ' + this.state.people.length)
         console.log()
         this.peIndex++
         this.setState({
@@ -48,13 +48,14 @@ class TeamPage extends Component {
         Promise.all([lazyApp, lazyDatabase]).then(([firebase]) => {
             let peeps = []
             const database = getFirebase(firebase).database()
-            database.ref('people').on('value', (snapshot) => {
+            database.ref('peoples').on('value', (snapshot) => {
                 snapshot.forEach((childSnapshot) => {
                     console.log(childSnapshot.val())
                     peeps.push(childSnapshot.val())
                 })
                 this.setState({ people: peeps })
                 console.log(this.state.people)
+                console.log('FIREBASE LAUNCHED')
             })
         })
     }
@@ -75,7 +76,7 @@ class TeamPage extends Component {
                         <h1>This is our people</h1>
                         <div className={'team-list-div'}>
                             {this.peIndex > 0 ? <div className={'nextbtn'} onClick={this.prevPerson}>Previous</div> : ''}
-                            {this.peIndex < this.state.peoples.length-1 ? <div className={'nextbtn'} onClick={this.nextPerson}>Next</div> : ''}
+                            {this.peIndex < this.state.people.length-1 ? <div className={'nextbtn'} onClick={this.nextPerson}>Next</div> : ''}
 
                             <div className={'person-div'}>
                                 <div className={'person-img-div'}>
@@ -87,19 +88,6 @@ class TeamPage extends Component {
                                     <h3 className={'person-title'}>{this.state.people[this.peIndex] ? this.state.people[this.peIndex].title : 'Rendering...'}</h3>
                                 </div>
                             </div>
-
-                            {/*{this.state && this.state.people && this.state.people.map((item, index) =>*/}
-                            {/*    <div className={'person-div'} key={index}>*/}
-                            {/*        <div className={'person-img-div'}>*/}
-                            {/*            <img src={'http://stasseynsjonas.be/api/profiles/' + item.image} className={'person-image'}/>*/}
-                            {/*        </div>*/}
-                            {/*        <div className={'person-data-div'}>*/}
-                            {/*            <h1 className={'person-name'}>{item.name}</h1>*/}
-                            {/*            <div className={'stripe'}></div>*/}
-                            {/*            <h3 className={'person-title'}>{item.title}</h3>*/}
-                            {/*        </div>*/}
-                            {/*    </div>*/}
-                            {/*)}*/}
                         </div>
                     </div>
                 </div>
