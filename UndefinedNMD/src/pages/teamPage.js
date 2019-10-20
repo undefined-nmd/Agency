@@ -66,7 +66,7 @@ class TeamPage extends Component {
         Promise.all([lazyApp, lazyDatabase]).then(([firebase]) => {
             let peeps = []
             const database = getFirebase(firebase).database()
-            database.ref('people').on('value', (snapshot) => {
+            database.ref('peoples').on('value', (snapshot) => {
                 snapshot.forEach((childSnapshot) => {
                     console.log(childSnapshot.val())
                     peeps.push(childSnapshot.val())
@@ -149,7 +149,7 @@ class TeamPage extends Component {
                     </div>
                     <div className="row bottom-row">
                         <img src={this.state.people[this.peIndex] ? 'http://stasseynsjonas.be/api/profiles/' + this.state.people[this.peIndex].image : 'http://stasseynsjonas.be/api/profiles/placeholder.jpg'} className={'person-image'} />
-                        <a className="person-action-btn" onClick={this.prevPerson}><img src={arrow} alt="arrow" className="flip-arrow" /></a>
+                        <a className="person-action-btn" onClick={this.nextPerson}><img src={arrow} alt="arrow" className="flip-arrow" /></a>
                         <div className={'person-data-div'}>
                             <h2>Team</h2>
                         </div>
