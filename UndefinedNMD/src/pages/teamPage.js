@@ -80,28 +80,6 @@ class TeamPage extends Component {
     render() {
 
         return (
-            // <Layout>
-            //     <SEO title="Assignments" />
-            //     <div>HERE KOMeS DE NAV</div>
-            //     <div className={'content-div-detail'}>
-            //         <h1>This is our people</h1>
-            //         <div className={'team-list-div'}>
-            //             <div className={'nextbtn'} onClick={this.prevPerson}>Previous</div>
-            //             <div className={'nextbtn'} onClick={this.nextPerson}>Next</div>
-
-            //             <div className={'person-div'}>
-            //                 <div className={'person-img-div'}>
-            //                     <img src={this.state.people[this.peIndex] ? 'http://stasseynsjonas.be/api/profiles/' + this.state.people[this.peIndex].image : 'http://stasseynsjonas.be/api/profiles/placeholder.jpg'} className={'person-image'} />
-            //                 </div>
-            //                 <div className={'person-data-div'}>
-            //                     <h1 className={'person-name'}>{this.state.people[this.peIndex] ? this.state.people[this.peIndex].name : 'Rendering...'}</h1>
-            //                     <div className={'stripe'}></div>
-            //                     <h3 className={'person-title'}>{this.state.people[this.peIndex] ? this.state.people[this.peIndex].title : 'Rendering...'}</h3>
-            //                 </div>
-            //             </div>
-            //         </div>
-            //     </div>
-            // </Layout>
             <Layout>
                 <SEO title="Assignments" />
                 <div className="col team-col">
@@ -148,10 +126,10 @@ class TeamPage extends Component {
                         </div>
                     </div>
                     <div className="row bottom-row">
-                        <img src={this.state.people[this.peIndex] ? 'http://stasseynsjonas.be/api/profiles/' + this.state.people[this.peIndex].image : 'http://stasseynsjonas.be/api/profiles/placeholder.jpg'} className={'person-image'} />
+                        <img src={this.state.people[this.peIndex + 1] ? 'http://stasseynsjonas.be/api/profiles/' + this.state.people[this.peIndex + 1].image : 'http://stasseynsjonas.be/api/profiles/placeholder.jpg'} className={'person-image'} />
                         <a className="person-action-btn" onClick={this.nextPerson}><img src={arrow} alt="arrow" className="flip-arrow" /></a>
                         <div className={'person-data-div'}>
-                            <h2>Team</h2>
+                            <h2 className="person-cue">{this.state.people[this.peIndex + 1] ? this.state.people[this.peIndex + 1].name : 'Rendering...'}</h2>
                         </div>
                     </div>
                 </div>
