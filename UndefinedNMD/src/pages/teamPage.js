@@ -13,7 +13,7 @@ class TeamPage extends Component {
         super(props);
         // change code below this line
         this.state = {
-            people: [],
+            people: [1, 2, 3],
             trigger: true,
             navActive: false,
             showNav: 'show-nav',
@@ -27,6 +27,8 @@ class TeamPage extends Component {
 
     nextPerson() {
         console.log(this.peIndex)
+        console.log('length: ' + this.state.people.length)
+        console.log()
         this.peIndex++
         this.setState({
             trigger: true,
@@ -66,13 +68,14 @@ class TeamPage extends Component {
         Promise.all([lazyApp, lazyDatabase]).then(([firebase]) => {
             let peeps = []
             const database = getFirebase(firebase).database()
-            database.ref('people').on('value', (snapshot) => {
+            database.ref('peoples').on('value', (snapshot) => {
                 snapshot.forEach((childSnapshot) => {
                     console.log(childSnapshot.val())
                     peeps.push(childSnapshot.val())
                 })
                 this.setState({ people: peeps })
                 console.log(this.state.people)
+                console.log('FIREBASE LAUNCHED')
             })
         })
     }
