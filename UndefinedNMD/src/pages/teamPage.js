@@ -105,7 +105,7 @@ class TeamPage extends Component {
             <Layout>
                 <SEO title="Assignments" />
                 <div className="col team-col">
-                    <div className={this.toggleNav()}>
+                    <div className={this.toggleNav() + ' margin-fix'}>
                         <div className="close-nav" onClick={this.getNavState}>
                             <div className="close-nav-top"></div>
                             <div className="close-nav-bottom"></div>
