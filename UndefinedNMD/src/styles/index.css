@@ -109,6 +109,7 @@ span{
     position: absolute;
     padding: 5%;
     padding-top: 10%;
+    justify-content: space-evenly;
 }
 
 .hide-nav {
@@ -169,6 +170,7 @@ span{
     right: 170px;
     padding: 10px;
     transition: 0.2s ease-in-out;
+    top: 15%;
 }
 
 .close-nav:hover {

@@ -1,0 +1,136 @@
+.team-col {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0% 5%;
+}
+
+.top-row {
+    height: 35vh;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.reduce-width {
+    width: auto;
+}
+
+.center-row, .bottom-row {
+    height: 40vh;
+}
+
+.center-row {
+    margin-bottom: 5vh;
+}
+
+.bottom-row {
+    height: 35vh;
+}
+
+.person-image {
+    width: 45%;
+    border-radius: 10px;
+}
+
+.person-data-div, .person-action-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flip-arrow {
+    transform: rotate(180deg);
+}
+
+.person-data-div {
+    width: 30%;
+}
+
+.person-action-btn {
+    width: 18px;
+}
+
+.person-name {
+    font-size: 3vw;
+}
+
+.person-bar {
+    border-bottom: 1px solid black;
+    width: 20%;
+}
+
+.person-title {
+    margin-top: 3vh;
+}
+
+
+
+
+/* .team-list-div {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+}
+
+
+
+.team-row {
+    height: 40vh;
+}
+
+.person-div {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.person-img {
+    width: 50%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    margin-bottom: 1.45rem;
+    border-radius: 10px;
+}
+
+.person-img-div {
+    width: 50%;
+    padding: 5vw;
+}
+
+.person-img-div img {
+    height: 80vh;
+}
+
+.person-data-div {
+    width: 50%;
+    padding: 10vw;
+}
+
+.person-name {
+    font-size: 3vw;
+}
+
+.stripe {
+    border-bottom: 1px solid black;
+    width: 20%;
+}
+
+.person-title {
+    margin-top: 3vh;
+}
+
+.nextbtn {
+    background-color: blue;
+} */
