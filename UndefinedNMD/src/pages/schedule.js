@@ -19,7 +19,7 @@ class AssignmentsPage extends Component {
     render() {
         return (
             <Layout>
-                <SEO title="Assignments"/>
+                <SEO title="Schedule"/>
                 <div className={'hero-img-detail'}>
                     <h1 className="project-title">Schedule</h1>
                     <div className={'subtitles-detail'}>
