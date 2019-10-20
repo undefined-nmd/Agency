@@ -22,6 +22,8 @@ class AssignmentsPage extends Component {
 
     nextPerson() {
         console.log(this.peIndex)
+        console.log('length: ' + this.state.peoples.length)
+        console.log()
         this.peIndex++
         this.setState({
             trigger: true,
@@ -72,8 +74,8 @@ class AssignmentsPage extends Component {
                     <div className={'content-div-detail'}>
                         <h1>This is our peoples</h1>
                         <div className={'team-list-div'}>
-                            <div className={'nextbtn'} onClick={this.prevPerson}>Previous</div>
-                            <div className={'nextbtn'} onClick={this.nextPerson}>Next</div>
+                            {this.peIndex > 0 ? <div className={'nextbtn'} onClick={this.prevPerson}>Previous</div> : ''}
+                            {this.peIndex < this.state.peoples.length-1 ? <div className={'nextbtn'} onClick={this.nextPerson}>Next</div> : ''}
 
                             <div className={'person-div'}>
                                 <div className={'person-img-div'}>
