@@ -1,6 +1,6 @@
 import React, { Component } from "react"
-import { Link } from "gatsby"
 import arrow from '../images/noun-arrow.svg';
+import Menu from '../components/menu'
 
 import Layout from "../components/layout"
 import "../styles/teamPage.css"
@@ -22,7 +22,11 @@ class TeamPage extends Component {
         this.peIndex = 0;
         this.nextPerson = this.nextPerson.bind(this);
         this.prevPerson = this.prevPerson.bind(this);
-        this.toggleNav = this.toggleNav.bind(this);
+    }
+
+    getNavState = () => {
+        this.setState(state => ({ navActive: !state.navActive }));
+        console.log('State change ! ! ! ');
     }
 
     nextPerson() {
@@ -42,21 +46,6 @@ class TeamPage extends Component {
         })
         console.log(this.state.people[this.peIndex])
         console.log(this.peIndex)
-    }
-
-    getNavState = () => {
-        this.setState(state => ({ navActive: !state.navActive }));
-        console.log(this.state.navActive)
-    }
-
-    toggleNav = () => {
-        let navStatus = this.state.navActive;
-        if (this.state.navActive === true) {
-            navStatus = this.state.showNav
-        } else {
-            navStatus = this.state.hideNav
-        }
-        return navStatus;
     }
 
     componentDidMount() {
@@ -83,32 +72,8 @@ class TeamPage extends Component {
             <Layout>
                 <SEO title="Assignments" />
                 <div className="col team-col">
-                    <div className={this.toggleNav() + ' margin-fix'}>
-                        <div className="close-nav" onClick={this.getNavState}>
-                            <div className="close-nav-top"></div>
-                            <div className="close-nav-bottom"></div>
-                        </div>
-                        <div className="row">
-                            <div className="col">
-                                <a className="nav-links" href="/teamPage" >Team</a>
-                                <a className="nav-links" href="/projects" >Projects</a>
-                                <a className="nav-links" href="/about" >About</a>
-                                <a className="nav-links" href="/contact" >Contact</a>
-                            </div>
-                        </div>
-
-                        <div className="row">
-                            <div className="col">
-                                <p className="nav-p">Please tell us about your future project</p>
-                            </div>
-                        </div>
-
-                        <div className="row">
-                            <div className="col">
-                                <a href="/contact" className="button-contact-us">Contact us</a>
-                            </div>
-                            <h2>_defined</h2>
-                        </div>
+                    <div className="margin-fix">
+                        <Menu menustate={this.state.navActive} toggleNav={this.getNavState} />
                     </div>
                     <div className="row top-row">
                         <div className="toggle-nav reduce-width" onClick={this.getNavState}>
