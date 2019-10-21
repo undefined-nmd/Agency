@@ -15,6 +15,7 @@
 .center-row {
     margin-bottom: 5vh;
     height: 55vh;
+    position: relative;
 }
 
 .bottom-row {
@@ -25,11 +26,37 @@
     width: auto;
 }
 
+.person-image-top{
+    height: 55vh;
+    position: absolute;
+    top:0;
+    left:0;
+	overflow: hidden;
+}
 
-.person-image {
+.person-image-top, .person-image {
     width: 45%;
     border-radius: 10px;
+    object-fit: cover;
+    object-position: top;
 }
+
+.center-row .swap-on-hover__front-image {
+    z-index: 9999;
+  }
+  
+  .center-row:hover > .swap-on-hover__front-image{
+    display:none;
+  }
+
+  .center-row > .swap-on-hover__back-image{
+    display: none;
+  }
+
+  .center-row:hover > .swap-on-hover__back-image{
+    display: block;
+}
+
 
 .person-data-div, .person-action-btn {
     display: flex;
@@ -43,11 +70,6 @@
 
 .person-data-div {
     width: 30%;
-}
-
-.person-image {
-    object-fit: cover;
-    object-position: top;
 }
 
 .person-action-btn {

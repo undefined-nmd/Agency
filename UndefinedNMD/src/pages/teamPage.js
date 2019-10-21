@@ -82,7 +82,8 @@ class TeamPage extends Component {
                         </div>
                     </div>
                     <div className="row center-row">
-                        <img src={this.state.people[this.peIndex] ? 'http://stasseynsjonas.be/api/profiles/' + this.state.people[this.peIndex].image : 'http://stasseynsjonas.be/api/profiles/placeholder.jpg'} className={'person-image'} />
+                        <img src={this.state.people[this.peIndex] ? 'http://stasseynsjonas.be/api/profiles/' + this.state.people[this.peIndex].image : 'http://stasseynsjonas.be/api/profiles/placeholder.jpg'} className={'person-image persone-image-top swap-on-hover__front-image'} />
+                        <img src={this.state.people[this.peIndex] ? 'http://stasseynsjonas.be/api/profiles/h-' + this.state.people[this.peIndex].image : 'http://stasseynsjonas.be/api/profiles/placeholder.jpg'} className={'person-image persone-image-top swap-on-hover__back-image'} />
                         <a className="person-action-btn" onClick={this.prevPerson}><img src={arrow} alt="arrow" /></a>
                         <div className={'person-data-div'}>
                             <h1 className={'person-name'}>{this.state.people[this.peIndex] ? this.state.people[this.peIndex].name : 'Rendering...'}</h1>
