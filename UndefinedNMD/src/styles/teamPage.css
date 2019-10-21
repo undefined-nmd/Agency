@@ -42,7 +42,7 @@
 }
 
 .center-row .swap-on-hover__front-image {
-    z-index: 9999;
+    z-index: 2;
   }
   
   .center-row:hover > .swap-on-hover__front-image{
