@@ -31,21 +31,25 @@ class TeamPage extends Component {
 
     nextPerson() {
         console.log(this.peIndex)
-        this.peIndex++
-        this.setState({
-            trigger: true,
-        })
-        console.log(this.state.people[this.peIndex])
-        console.log(this.peIndex)
+        if (this.peIndex < this.state.people.length - 1) {
+            this.peIndex++
+            this.setState({
+                trigger: true,
+            })
+            console.log(this.state.people[this.peIndex])
+            console.log(this.peIndex)
+        }
     }
     prevPerson() {
         console.log(this.peIndex)
-        this.peIndex--
-        this.setState({
-            trigger: true,
-        })
-        console.log(this.state.people[this.peIndex])
-        console.log(this.peIndex)
+        if (this.peIndex > 0) {
+            this.peIndex--
+            this.setState({
+                trigger: true,
+            })
+            console.log(this.state.people[this.peIndex])
+            console.log(this.peIndex)   
+        }
     }
 
     componentDidMount() {
