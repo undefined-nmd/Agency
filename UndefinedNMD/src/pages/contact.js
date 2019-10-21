@@ -16,7 +16,7 @@ const ContactPage = () => (
             </div>
             <div className={'contactinfo-social'}> 
                 <h2>Social</h2>
-                <p>Instagram / Facebook / LinkedIn / Twitter</p> 
+                <p><a href="https://www.instagram.com/undefinednmd/">Instagram</a> / <a href="https://www.facebook.com/undefinednmd/">Facebook</a> / <a href="https://www.linkedin.com/in/undefined-nmd-122144194/">LinkedIn</a> / <a href="https://twitter.com/UNDEFIN78240322">Twitter</a></p> 
             </div>
             <div className={'contactinfo-general'}> 
             <p>Hoogpoort 15</p>
