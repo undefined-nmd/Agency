@@ -1,0 +1,197 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+}
+
+.hero-img {
+    height: 100vh;
+    width: 57%;
+    background-color: burlywood;
+    background-image: url('../images/tumblr_n7jz4u5Fgd1ql2g28o1_500.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5%;
+}
+
+.project-title {
+    font-size: 650%;
+    color:white;
+}
+
+.subtitles {
+    display: flex;
+    align-items: stretch;
+    width: 80%;
+    justify-content: space-between;
+    color: white;
+}
+
+.line {
+    height: 1px;
+    width: 65%;
+    background-color: white;
+    margin-top: 8px;
+}
+
+.content-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0% 10%;
+}
+
+.content-child {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: space-evenly;
+}
+
+.toggle-nav {
+    height: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 20%;
+}
+
+.nav-line-top {
+    height: 1px;
+    width: 30px;
+    background-color: black;
+    transition: 0.2s ease-in-out;
+}
+
+.nav-line-bottom {
+    height: 1px;
+    width: 20px;
+    background-color: black;
+    transition: 0.2s ease-in-out;
+}
+
+.toggle-nav:hover .nav-line-top {
+    width: 45px;
+    transition: 0.2s ease-in-out;
+}
+
+.toggle-nav:hover .nav-line-bottom {
+    margin-left: -5px;
+}
+
+.brand-title {
+    font-size: 300%;
+}
+
+.baseline {
+    font-size: 180%;
+    font-weight: 100;
+}
+
+span{
+    display: block;
+}
+
+.show-nav {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    padding: 5%;
+    padding-top: 10%;
+    justify-content: space-evenly;
+    z-index: 10;
+}
+
+.hide-nav {
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-links {
+    text-decoration: none;
+    color: black;
+    font-weight: 100;
+    font-size: 280%;
+    line-height: 65px;
+    transition: 0.2s ease-in-out;
+}
+
+.nav-links:hover {
+    color: blue;
+    transition: 0.2s ease-in-out;
+}
+
+.nav-p {
+    font-weight: 100;
+    color: lightgrey;
+    font-size: 200%;
+    margin-top: 70px;
+}
+
+.button-contact-us {
+    background: #2C3CFF;
+    padding: 10px 52px;
+    color: white;
+    border-radius: 10px;
+    font-weight: 100;
+    transition: 0.2s ease-in-out;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.button-contact-us:hover {
+    background: rgb(66, 82, 255);
+    transition: 0.2s ease-in-out;
+}
+
+.close-nav {
+    position: absolute;
+    right: 170px;
+    padding: 10px;
+    transition: 0.2s ease-in-out;
+    top: 15%;
+}
+
+.close-nav:hover {
+    cursor: pointer;
+    transform: rotate(90deg);
+    transition: 0.2s ease-in-out;
+}
+
+.close-nav:hover .close-nav-top, .close-nav:hover .close-nav-bottom {
+    background: #2C3CFF;
+}
+
+.close-nav-top, .close-nav-bottom {
+    height: 1px;
+    background: grey;
+    width: 20px;
+    transform: rotate(45deg);
+}
+
+.close-nav-bottom {
+    transform: rotate(-45deg);
+
+}

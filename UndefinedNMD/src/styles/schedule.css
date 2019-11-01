@@ -1,0 +1,6 @@
+.schedule-parent {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 5vh auto;
+}
