@@ -15,7 +15,6 @@
     "gatsby-source-filesystem": "^2.1.28",
     "gatsby-source-firebase": "^1.0.0",
     "gatsby-transformer-sharp": "^2.2.19",
-    "gh-pages": "^2.1.1",
     "prop-types": "^15.7.2",
     "react": "^16.10.0",
     "react-dom": "^16.10.0",
@@ -24,6 +23,7 @@
   },
   "devDependencies": {
     "gatsby": "^2.15.36",
+    "gh-pages": "^2.1.1",
     "prettier": "^1.18.2"
   },
   "keywords": [
@@ -35,7 +35,8 @@
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "deploy": "gatsby build && gh-pages -d public -b master"
   },
   "repository": {
     "type": "git",
