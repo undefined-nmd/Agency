@@ -41,16 +41,19 @@ class ServicesPage extends Component {
                         <div className="nav-line-top"></div>
                         <div className="nav-line-bottom"></div>
                     </div>
-                    {this.state && this.state.services && this.state.services.map((item, index) => {
-                        console.log(item)
-                        return (
-                            <div key={index}>
-                                <h3>{item.data.title}</h3>
-                                <p>{item.data.description}</p>
-                                <img src={item.data.picture.reference_md} />
-                            </div>
-                        )
-                    })}
+                    <h1>Services</h1>
+                    <div className={'services-list-container'}>
+                        {this.state && this.state.services && this.state.services.map((item, index) => {
+                            console.log(item)
+                            return (
+                                <div key={index}>
+                                    <h3>{item.data.title}</h3>
+                                    <p>{item.data.description}</p>
+                                    <img src={item.data.picture.reference_md} />
+                                </div>
+                            )
+                        })}
+                    </div>
                 </div>
             </Layout>
         )
