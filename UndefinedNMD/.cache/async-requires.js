@@ -10,6 +10,7 @@ exports.components = {
   "component---src-pages-projectdetailpage-js": () => import("../src/pages/projectdetailpage.js" /* webpackChunkName: "component---src-pages-projectdetailpage-js" */),
   "component---src-pages-schedule-js": () => import("../src/pages/schedule.js" /* webpackChunkName: "component---src-pages-schedule-js" */),
   "component---src-pages-services-js": () => import("../src/pages/services.js" /* webpackChunkName: "component---src-pages-services-js" */),
-  "component---src-pages-team-page-js": () => import("../src/pages/teamPage.js" /* webpackChunkName: "component---src-pages-team-page-js" */)
+  "component---src-pages-team-page-js": () => import("../src/pages/teamPage.js" /* webpackChunkName: "component---src-pages-team-page-js" */),
+  "component---src-pages-about-js": () => import("../src/pages/about.js" /* webpackChunkName: "component---src-pages-about-js" */)
 }
 
