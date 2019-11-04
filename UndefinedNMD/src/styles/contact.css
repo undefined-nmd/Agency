@@ -1,0 +1,136 @@
+.contact-container {
+    padding: 5% 10%;
+    position: relative;
+}
+
+.contact-h2 {
+    font-weight: 300;
+    font-size: 250%;
+    margin-bottom: 10px;
+}
+
+.contact-p {
+    font-weight: 100;
+}
+
+.contactinfo-contact {
+    margin-top: 5%;
+}
+
+.contactinfo-general {
+    font-weight: 100;
+    font-weight: 100;
+    color: #868686;
+    font-size: 110%;
+}
+
+.contactinfo-general p {
+    margin-bottom: 5px;
+}
+
+.rightside-title h1 {
+    position: absolute;
+    right: 10%;
+    top: -12%;
+    font-size: 640%;
+    font-weight: 400;
+    color: black;
+}
+
+.rightside-button {
+    position: absolute;
+    right: 10%;
+    bottom: 25%;
+}
+
+.add-btn-padding {
+    padding: 20px 70px !important;
+}
+
+
+.rightside-logo {
+    position: absolute;
+    border: 4px solid blue;
+    width: 75%;
+    height: 25%;
+    left: -5%;
+    bottom: -5%;
+    border-radius: 35px;
+}
+
+.contactinfo-social, .contactinfo-contact {
+    margin-bottom: 3%;
+}
+
+.undefined-copyright-contact {
+    position: absolute;
+    right: 10%;
+    font-size: 250%;
+    font-weight: 600;
+    bottom: 8%;
+}
+
+.hide-form-div {
+    display: none;
+}
+
+.show-form-div {
+    background: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 20%;
+    background: #f5f5f5d1;
+    border-radius: 20px;
+    width: 70%;
+    height: 65vh;
+    margin: 0;
+    justify-content: center;
+    position: relative;
+}
+
+
+
+.close-form {
+    position: absolute;
+    padding: 10px;
+    transition: 0.2s ease-in-out;
+    top: 15%;
+    right: 5%;
+    top: 5%;
+}
+
+.close-form:hover {
+    cursor: pointer;
+    transform: rotate(90deg);
+    transition: 0.2s ease-in-out;
+}
+
+.question-form-input {
+    background: none;
+    border: 1px solid #2C3CFF;
+    border-radius: 5px;
+    padding: 2%;
+    outline: none;
+    display: block;
+    margin: 10px 0px;
+}
+
+.question-form-textarea {
+    padding-bottom: 80px;
+}
+
+.center-action-btn {
+    display: flex;
+    justify-content: center;
+}
