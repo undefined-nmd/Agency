@@ -11,6 +11,8 @@ exports.components = {
   "component---src-pages-projects-page-js": () => import("/Users/brunodecoene/Documents/GitHub/Agency/UndefinedNMD/src/pages/projectsPage.js" /* webpackChunkName: "component---src-pages-projects-page-js" */),
   "component---src-pages-schedule-js": () => import("/Users/brunodecoene/Documents/GitHub/Agency/UndefinedNMD/src/pages/schedule.js" /* webpackChunkName: "component---src-pages-schedule-js" */),
   "component---src-pages-team-page-js": () => import("/Users/brunodecoene/Documents/GitHub/Agency/UndefinedNMD/src/pages/teamPage.js" /* webpackChunkName: "component---src-pages-team-page-js" */),
-  "component---src-pages-projectspage-js": () => import("/Users/brunodecoene/Documents/GitHub/Agency/UndefinedNMD/src/pages/projectspage.js" /* webpackChunkName: "component---src-pages-projectspage-js" */)
+  "component---src-pages-projectspage-js": () => import("/Users/brunodecoene/Documents/GitHub/Agency/UndefinedNMD/src/pages/projectspage.js" /* webpackChunkName: "component---src-pages-projectspage-js" */),
+  "component---src-pages-about-js": () => import("/Users/brunodecoene/Documents/GitHub/Agency/UndefinedNMD/src/pages/about.js" /* webpackChunkName: "component---src-pages-about-js" */),
+  "component---src-pages-services-js": () => import("/Users/brunodecoene/Documents/GitHub/Agency/UndefinedNMD/src/pages/services.js" /* webpackChunkName: "component---src-pages-services-js" */)
 }
 

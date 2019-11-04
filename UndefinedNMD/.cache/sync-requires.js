@@ -14,6 +14,8 @@ exports.components = {
   "component---src-pages-projects-page-js": hot(preferDefault(require("/Users/brunodecoene/Documents/GitHub/Agency/UndefinedNMD/src/pages/projectsPage.js"))),
   "component---src-pages-schedule-js": hot(preferDefault(require("/Users/brunodecoene/Documents/GitHub/Agency/UndefinedNMD/src/pages/schedule.js"))),
   "component---src-pages-team-page-js": hot(preferDefault(require("/Users/brunodecoene/Documents/GitHub/Agency/UndefinedNMD/src/pages/teamPage.js"))),
-  "component---src-pages-projectspage-js": hot(preferDefault(require("/Users/brunodecoene/Documents/GitHub/Agency/UndefinedNMD/src/pages/projectspage.js")))
+  "component---src-pages-projectspage-js": hot(preferDefault(require("/Users/brunodecoene/Documents/GitHub/Agency/UndefinedNMD/src/pages/projectspage.js"))),
+  "component---src-pages-about-js": hot(preferDefault(require("/Users/brunodecoene/Documents/GitHub/Agency/UndefinedNMD/src/pages/about.js"))),
+  "component---src-pages-services-js": hot(preferDefault(require("/Users/brunodecoene/Documents/GitHub/Agency/UndefinedNMD/src/pages/services.js")))
 }
 
