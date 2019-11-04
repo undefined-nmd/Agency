@@ -32,12 +32,12 @@ class About extends Component {
                 <SEO title="Assignments" />
                 <div className="main-container">
                 <p className="project-intro">
-                    {this.state.content[0].data.synopsis}
+                        {this.state.content[0] ? this.state.content[0].data.synopsis : 'Rendering...'}
                 </p>
                 <div className="content-box">
-                    <h3 className="project-subtitle">{this.state.content[0].data.title}</h3>
+                    <h3 className="project-subtitle">{this.state.content[0] ? this.state.content[0].data.title : 'Rendering...'}</h3>
                     <p className="project-text">
-                        {this.state.content[0].data.body}
+                    {this.state.content[0] ? this.state.content[0].data.body : 'Rendering...'}
                     </p>
                 </div>
                 </div>
