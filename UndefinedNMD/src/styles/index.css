@@ -107,7 +107,7 @@ span{
     flex-direction: column;
     background-color: white;
     position: absolute;
-    padding: 5%;
+    padding: 5% 10%;
     padding-top: 10%;
     justify-content: space-evenly;
     z-index: 10;
