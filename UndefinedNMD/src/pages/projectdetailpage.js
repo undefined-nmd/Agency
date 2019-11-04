@@ -2,7 +2,7 @@ import React from "react"
 // import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import "../styles/projects.css"
+import "../styles/projectdetail.css"
 // import Image from "../components/image"
 import SEO from "../components/seo"
 
@@ -64,7 +64,7 @@ const ProjectDetailPage = () => (
       />
     </div>
     <div className="main-container">
-    <div className="content-box">
+      <div className="content-box">
         <h3 className="project-subtitle">Services</h3>
         <ul className="project-text">
           <li>Brand identity</li>
@@ -78,23 +78,23 @@ const ProjectDetailPage = () => (
         <a href="" className="action-button">Contact us</a>
       </div>
       <footer>
-          <div className="footer-container-left">
-            <ul>
-              <li>Contact</li>
-              <li>Social</li>
-            </ul>
-          </div>
-          <ul className="footer-container-center">
-            <li className="footer-info-general"><span className="footer-info-general">info@arteveldehs.be / 09 234 86 00</span></li>
-            <li className="footer-info-general"><span className="footer-info-general">Instagram / Facebook / LinkedIn / Twitter</span></li>
-            <li className="footer-info-general">Hoogpoort 15</li>
-            <li className="footer-info-general">9000 Gent</li>
-            <li className="footer-info-general">ONnr: 0474.120.360</li>
-            <li className="footer-info-general">BTWnr: BTW BE 0474.120.360</li>
+        <div className="footer-container-left">
+          <ul>
+            <li>Contact</li>
+            <li>Social</li>
           </ul>
-          <div className="blank"></div>
-          <div className="undefined-copyright">_defined</div>
-        </footer>
+        </div>
+        <ul className="footer-container-center">
+          <li className="footer-info-general"><span className="footer-info-general">info@arteveldehs.be / 09 234 86 00</span></li>
+          <li className="footer-info-general"><span className="footer-info-general">Instagram / Facebook / LinkedIn / Twitter</span></li>
+          <li className="footer-info-general">Hoogpoort 15</li>
+          <li className="footer-info-general">9000 Gent</li>
+          <li className="footer-info-general">ONnr: 0474.120.360</li>
+          <li className="footer-info-general">BTWnr: BTW BE 0474.120.360</li>
+        </ul>
+        <div className="blank"></div>
+        <div className="undefined-copyright">_defined</div>
+      </footer>
     </div>
   </Layout>
 )

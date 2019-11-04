@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import Layout from "../components/layout"
 import Menu from '../components/menu'
 import "../styles/contact.css"
@@ -36,7 +35,7 @@ class ContactPage extends Component {
         <SEO title="Contact" />
         <Menu menustate={this.state.navActive} toggleNav={this.getNavState} />
         <div className={'contact-container'}>
-          <div className="toggle-nav" onClick={this.getNavState}>
+          <div className="toggle-nav reduce-width-float" onClick={this.getNavState}>
             <div className="nav-line-top"></div>
             <div className="nav-line-bottom"></div>
           </div>
@@ -60,12 +59,12 @@ class ContactPage extends Component {
             {/* <h1>Contact</h1> */}
           </div>
           <div className={'rightside-button'}>
-            <a href="#" className="action-button add-btn-padding" onClick={this.getFormState}>Contact us</a>
+            <a href="#" className="action-button add-btn-padding" onClick={this.getFormState}>Your question?</a>
           </div>
         </div>
         <div className={'rightside-logo'}>
         </div>
-        <div className="undefined-copyright-contact">_defined</div>
+        <a href="/#" className="undefined-copyright-contact">_defined</a>
         <div className={formState ? showHideForm.showForm : showHideForm.hideForm}>
           <form>
             <h3 className="project-subtitle">Ask us a anything</h3>

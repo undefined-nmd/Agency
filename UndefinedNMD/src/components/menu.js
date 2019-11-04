@@ -35,7 +35,7 @@ class Menu extends Component {
                     <div className="col">
                         <a href="/contact" className="button-contact-us">Contact us</a>
                     </div>
-                    <h2>_defined</h2>
+                    <a href="/#" className="undefined-copyright-contact">_defined</a>
                 </div>
             </div>
         )

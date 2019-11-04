@@ -1,3 +1,8 @@
+::placeholder {
+    color: rgb(90, 90, 90);
+    font-weight: 200;
+  }
+
 .contact-container {
     padding: 5% 10%;
     position: relative;
@@ -49,7 +54,7 @@
 
 
 .rightside-logo {
-    position: absolute;
+    position: fixed;
     border: 4px solid blue;
     width: 75%;
     height: 25%;
@@ -68,7 +73,16 @@
     font-size: 250%;
     font-weight: 600;
     bottom: 8%;
+    text-decoration: none;
+    color: black;
+    transition: 0.2s ease-in-out;
 }
+
+.undefined-copyright-contact:hover {
+    transform: scale(1.03);
+    transition: 0.2s ease-in-out;
+}
+
 
 .hide-form-div {
     display: none;
@@ -98,8 +112,6 @@ form {
     justify-content: center;
     position: relative;
 }
-
-
 
 .close-form {
     position: absolute;
@@ -133,4 +145,9 @@ form {
 .center-action-btn {
     display: flex;
     justify-content: center;
+}
+
+.reduce-width-float {
+    width: auto !important;
+    float: right;
 }

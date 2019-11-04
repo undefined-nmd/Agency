@@ -81,10 +81,15 @@
 .toggle-nav:hover .nav-line-top {
     width: 45px;
     transition: 0.2s ease-in-out;
+    margin-bottom: 5px;
 }
 
 .toggle-nav:hover .nav-line-bottom {
-    margin-left: -5px;
+    /* margin-left: -5px; */
+    transition: 0.2s ease-in-out;
+    margin-top: 5px;
+    width: 45px;
+
 }
 
 .brand-title {
