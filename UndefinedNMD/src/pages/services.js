@@ -5,14 +5,21 @@ import Layout from "../components/layout"
 import "../styles/index.css"
 import SEO from "../components/seo"
 import axios from 'axios'
+import Menu from "../components/menu";
 
 
 class ServicesPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            navActive: false,
             services: []
         };
+    }
+
+    getNavState = () => {
+        this.setState(state => ({ navActive: !state.navActive }));
+        console.log('State change ! ! ! ');
     }
 
     componentDidMount() {
@@ -29,6 +36,11 @@ class ServicesPage extends Component {
             <Layout>
                 <SEO title="Services"/>
                 <div className={'container'}>
+                    <Menu menustate={this.state.navActive} toggleNav={this.getNavState} />
+                    <div className="toggle-nav" onClick={this.getNavState}>
+                        <div className="nav-line-top"></div>
+                        <div className="nav-line-bottom"></div>
+                    </div>
                     {this.state && this.state.services && this.state.services.map((item, index) => {
                         console.log(item)
                         return (
