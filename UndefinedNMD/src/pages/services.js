@@ -35,6 +35,7 @@ class ServicesPage extends Component {
                             <div key={index}>
                                 <h3>{item.data.title}</h3>
                                 <p>{item.data.description}</p>
+                                <img src={item.data.picture.reference_md} />
                             </div>
                         )
                     })}
