@@ -30,6 +30,7 @@ class IndexPage extends Component {
                                 <div className={'line'}></div>
                                 <h5 className={'date-text'}>2019</h5>
                             </div>
+                            {/*<p>{this.state.data}</p>*/}
                         </div>
                     </div>
                     <div className={'content-div'}>

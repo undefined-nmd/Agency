@@ -5,7 +5,7 @@ import Menu from '../components/menu'
 import Layout from "../components/layout"
 import "../styles/teamPage.css"
 import SEO from "../components/seo"
-import { getFirebase } from "../components/firebase-config";
+import axios from 'axios';
 
 class TeamPage extends Component {
 
@@ -48,25 +48,16 @@ class TeamPage extends Component {
                 trigger: true,
             })
             console.log(this.state.people[this.peIndex])
-            console.log(this.peIndex)   
+            console.log(this.peIndex)
         }
     }
 
     componentDidMount() {
-        const lazyApp = import('firebase/app')
-        const lazyDatabase = import('firebase/database')
-
-        Promise.all([lazyApp, lazyDatabase]).then(([firebase]) => {
-            let peeps = []
-            const database = getFirebase(firebase).database()
-            database.ref('peoples').on('value', (snapshot) => {
-                snapshot.forEach((childSnapshot) => {
-                    console.log(childSnapshot.val())
-                    peeps.push(childSnapshot.val())
-                })
-                this.setState({ people: peeps })
-                console.log(this.state.people)
+        axios.get('https://undefined-baas.firebaseapp.com/api/team').then((snap) => {
+            this.setState({
+                people: snap.data.data
             })
+            console.log(snap.data.data)
         })
     }
 
@@ -86,20 +77,20 @@ class TeamPage extends Component {
                         </div>
                     </div>
                     <div className="row center-row">
-                        <img src={this.state.people[this.peIndex] ? 'http://stasseynsjonas.be/api/profiles/' + this.state.people[this.peIndex].image : 'http://stasseynsjonas.be/api/profiles/placeholder.jpg'} className={'person-image persone-image-top swap-on-hover__front-image'} />
-                        <img src={this.state.people[this.peIndex] ? 'http://stasseynsjonas.be/api/profiles/h-' + this.state.people[this.peIndex].image : 'http://stasseynsjonas.be/api/profiles/placeholder.jpg'} className={'person-image persone-image-top swap-on-hover__back-image'} />
+                        {/*<img src={this.state.people[this.peIndex] ? 'http://stasseynsjonas.be/api/profiles/' + this.state.people[this.peIndex].image : 'http://stasseynsjonas.be/api/profiles/placeholder.jpg'} className={'person-image persone-image-top swap-on-hover__front-image'} />*/}
+                        {/*<img src={this.state.people[this.peIndex] ? 'http://stasseynsjonas.be/api/profiles/h-' + this.state.people[this.peIndex].image : 'http://stasseynsjonas.be/api/profiles/placeholder.jpg'} className={'person-image persone-image-top swap-on-hover__back-image'} />*/}
                         <a className="person-action-btn" onClick={this.prevPerson}><img src={arrow} alt="arrow" /></a>
                         <div className={'person-data-div'}>
-                            <h1 className={'person-name'}>{this.state.people[this.peIndex] ? this.state.people[this.peIndex].name : 'Rendering...'}</h1>
+                            <h1 className={'person-name'}>{this.state.people[this.peIndex] ? this.state.people[this.peIndex].data.firstName : 'Rendering...'}</h1>
                             <div className={'person-bar'}></div>
-                            <h3 className={'person-title'}>{this.state.people[this.peIndex] ? this.state.people[this.peIndex].title : 'Rendering...'}</h3>
+                            {/*<h3 className={'person-title'}>{this.state.people[this.peIndex] ? this.state.people[this.peIndex].title : 'Rendering...'}</h3>*/}
                         </div>
                     </div>
                     <div className="row bottom-row">
-                        <img src={this.state.people[this.peIndex + 1] ? 'http://stasseynsjonas.be/api/profiles/' + this.state.people[this.peIndex + 1].image : 'http://stasseynsjonas.be/api/profiles/placeholder.jpg'} className={'person-image'} />
+                        {/*<img src={this.state.people[this.peIndex + 1] ? 'http://stasseynsjonas.be/api/profiles/' + this.state.people[this.peIndex + 1].image : 'http://stasseynsjonas.be/api/profiles/placeholder.jpg'} className={'person-image'} />*/}
                         <a className="person-action-btn" onClick={this.nextPerson}><img src={arrow} alt="arrow" className="flip-arrow" /></a>
                         <div className={'person-data-div'}>
-                            <h2 className="person-cue">{this.state.people[this.peIndex + 1] ? this.state.people[this.peIndex + 1].name : 'Rendering...'}</h2>
+                            {/*<h2 className="person-cue">{this.state.people[this.peIndex + 1] ? this.state.people[this.peIndex + 1].name : 'Rendering...'}</h2>*/}
                         </div>
                     </div>
                 </div>
