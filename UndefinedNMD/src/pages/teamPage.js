@@ -77,9 +77,9 @@ class TeamPage extends Component {
                         </div>
                     </div>
                     <div className="row center-row">
-                        <img src={this.state.people[this.peIndex] ? this.state.people[this.peIndex].data.picture.reference_md : 'http://stasseynsjonas.be/api/profiles/placeholder.jpg'} className={'person-image persone-image-top swap-on-hover__front-image'} />
-                        <img src={this.state.people[this.peIndex] ? this.state.people[this.peIndex].data.picture_hoover.reference_md : 'http://stasseynsjonas.be/api/profiles/placeholder.jpg'} className={'person-image persone-image-top swap-on-hover__back-image'} />
-                        <a className="person-action-btn" onClick={this.prevPerson}><img src={arrow} alt="arrow" /></a>
+                        <img src={this.state.people[this.peIndex] ? this.state.people[this.peIndex].data.picture.reference_md : 'http://stasseynsjonas.be/api/profiles/placeholder.jpg'} className={'person-image persone-image-top swap-on-hover__front-image'} alt={'profile'} />
+                        <img src={this.state.people[this.peIndex] ? this.state.people[this.peIndex].data.picture_hoover.reference_md : 'http://stasseynsjonas.be/api/profiles/placeholder.jpg'} className={'person-image persone-image-top swap-on-hover__back-image'} alt={'profile'} />
+                        <p className="person-action-btn" onClick={this.prevPerson}><img src={arrow} alt="arrow" /></p>
                         <div className={'person-data-div'}>
                             <h1 className={'person-name'}>{this.state.people[this.peIndex] ? this.state.people[this.peIndex].data.firstName + ' ' + this.state.people[this.peIndex].data.lastName : 'Rendering...'}</h1>
                             <div className={'person-bar'}></div>
@@ -87,8 +87,8 @@ class TeamPage extends Component {
                         </div>
                     </div>
                     <div className="row bottom-row">
-                        <img src={this.state.people[this.peIndex + 1] ? this.state.people[this.peIndex + 1].data.picture.reference_md : 'http://stasseynsjonas.be/api/profiles/placeholder.jpg'} className={'person-image'} />
-                        <a className="person-action-btn" onClick={this.nextPerson}><img src={arrow} alt="arrow" className="flip-arrow" /></a>
+                        <img src={this.state.people[this.peIndex + 1] ? this.state.people[this.peIndex + 1].data.picture.reference_md : 'http://stasseynsjonas.be/api/profiles/placeholder.jpg'} className={'person-image'} alt={'next-profile'} />
+                        <p className="person-action-btn" onClick={this.nextPerson}><img src={arrow} alt="arrow" className="flip-arrow" /></p>
                         <div className={'person-data-div'}>
                             {/*<h2 className="person-cue">{this.state.people[this.peIndex + 1] ? this.state.people[this.peIndex + 1].name : 'Rendering...'}</h2>*/}
                         </div>
