@@ -1,12 +1,9 @@
 import React, {Component} from "react"
-import {Link} from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import '../styles/schedule.css'
 import '../styles/layout.css'
 import SEO from "../components/seo"
-import {getFirebase} from "../components/firebase-config";
 
 class AssignmentsPage extends Component {
     constructor(props) {

@@ -1,5 +1,4 @@
 import React, {Component} from "react"
-import {Link} from "gatsby"
 
 import Layout from "../components/layout"
 import "../styles/index.css"
@@ -49,7 +48,7 @@ class ServicesPage extends Component {
                                 <div key={index}>
                                     <h3>{item.data.title}</h3>
                                     <p>{item.data.description}</p>
-                                    <img src={item.data.picture.reference_md} />
+                                    <img src={item.data.picture.reference_md} alt={'service illustration'} />
                                 </div>
                             )
                         })}

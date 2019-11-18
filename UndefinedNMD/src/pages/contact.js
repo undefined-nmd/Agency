@@ -89,7 +89,7 @@ class ContactPage extends Component {
             {/* <h1>Contact</h1> */}
           </div>
           <div className={'rightside-button'}>
-            <a href="#" className="action-button add-btn-padding" onClick={this.getFormState}>Your question?</a>
+            <p className="action-button add-btn-padding" onClick={this.getFormState}>Your question?</p>
           </div>
         </div>
         <div className={'rightside-logo'}>

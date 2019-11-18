@@ -61,8 +61,8 @@ class ProjectsPage extends Component {
                                 <div className="project-list-container" key={index}>
                                     <h2 className="project-list-title">{item.data.title}</h2>
                                     <div className="project-list-row">
-                                        <img src={item.data.pictures.reference_md ? item.data.pictures.reference_md : 'https://firebasestorage.googleapis.com/v0/b/undefined-baas.appspot.com/o/resized%2Ftumblr_n7jz4u5Fgd1ql2g28o1_500_1280x1280.jpg?alt=media&token=16672718-2b3c-493f-a1f0-f6cab1d8eaaa'} className="project-list-image"></img>
-                                        <a className="action-button edit-height" onClick={() => this.setStateId(item)}>View project</a>
+                                        <img src={item.data.pictures.reference_md ? item.data.pictures.reference_md : 'https://firebasestorage.googleapis.com/v0/b/undefined-baas.appspot.com/o/resized%2Ftumblr_n7jz4u5Fgd1ql2g28o1_500_1280x1280.jpg?alt=media&token=16672718-2b3c-493f-a1f0-f6cab1d8eaaa'} className="project-list-image" alt={'project-img'} />
+                                        <p className="action-button edit-height" onClick={() => this.setStateId(item)}>View project</p>
                                     </div>
                                     <p className="project-list-slug">{item.data.synopsis ? item.data.synopsis : ''}</p>
                                 </div>
