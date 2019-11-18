@@ -1,17 +1,6 @@
 import React, {Component} from "react"
+import { Redirect } from '@reach/router' // highlight-line
 
-class Roster extends Component {
-
-    componentDidMount() {
-        console.log('HSHefic')
-        window.location.href = 'http://undefinednmd.gdm.gent'
-    }
-
-    render () {
-        return (
-            <h3>Redirecting...</h3>
-        )
-    }
-}
+const Roster = () => (<h1>redirecting...</h1>); // highlight-line
 
 export default Roster
