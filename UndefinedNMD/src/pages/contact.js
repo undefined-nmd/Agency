@@ -4,13 +4,23 @@ import Menu from '../components/menu'
 import "../styles/contact.css"
 import "../styles/index.css"
 import SEO from "../components/seo"
+import axios from "axios";
 
 class ContactPage extends Component {
-
-  state = {
-    formActive: false,
-    navActive: false
+  constructor(props) {
+    super(props);
+    this.state = {
+      formData: {
+        name: '',
+        email: '',
+        message: ''
+      },
+      formActive: false,
+      navActive: false
+    }
+    this.handleChange = this.handleChange.bind(this);
   }
+
 
   getFormState = () => {
     this.setState(state => ({ formActive: !state.formActive }));
@@ -20,6 +30,26 @@ class ContactPage extends Component {
   getNavState = () => {
     this.setState(state => ({ navActive: !state.navActive }));
     console.log(this.state.navActive);
+  }
+
+  handleChange = (e, property) => {
+    this.setState({
+      formData: {
+        ...this.state.formData,
+        [property]: e.target.value,
+      }
+    })
+    console.log(this.state.formData)
+  }
+
+  submitForm = () => {
+    axios.post('https://undefined-baas.firebaseapp.com/api/contact', this.state.formData)
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   }
 
   render() {
@@ -72,10 +102,10 @@ class ContactPage extends Component {
               <div className="close-nav-top"></div>
               <div className="close-nav-bottom"></div>
             </div>
-            <input type="text" placeholder="Name" className="question-form-input" />
-            <input type="email" placeholder="Email" className="question-form-input" />
-            <textarea type="text" rows="4" cols="50" placeholder="Your message" className="question-form-input question-form-textarea" />
-            <a href="" className="action-button center-action-btn">Send</a>
+            <input type="text" placeholder="Name" onChange={(e) => this.handleChange(e, 'name')} className="question-form-input con-form-name-val" />
+            <input type="email" placeholder="Email" onChange={(e) => this.handleChange(e, 'email')} className="question-form-input" />
+            <textarea type="text" rows="4" cols="50" placeholder="Your message" onChange={(e) => this.handleChange(e, 'message')} className="question-form-input question-form-textarea" />
+            <p className="action-button center-action-btn" onClick={this.submitForm}>Send</p>
           </form>
         </div>
       </Layout>
