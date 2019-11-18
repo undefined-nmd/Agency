@@ -1,12 +1,12 @@
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("C:\\Users\\OLIVIER\\Documents\\GitHub\\Agency\\node_modules\\core-js\\modules\\es6.object.assign.js"), require("C:\\Users\\OLIVIER\\Documents\\GitHub\\Agency\\node_modules\\core-js\\modules\\es6.object.to-string.js"), require("C:\\Users\\OLIVIER\\Documents\\GitHub\\Agency\\node_modules\\core-js\\modules\\es6.regexp.constructor.js"), require("C:\\Users\\OLIVIER\\Documents\\GitHub\\Agency\\node_modules\\core-js\\modules\\es6.regexp.split.js"), require("C:\\Users\\OLIVIER\\Documents\\GitHub\\Agency\\node_modules\\core-js\\modules\\es6.regexp.to-string.js"), require("C:\\Users\\OLIVIER\\Documents\\GitHub\\Agency\\node_modules\\lodash\\lodash.js"), require("react"), require("react-dom/server"));
+		module.exports = factory(require("/Users/brunodecoene/Documents/GitHub/Agency/node_modules/core-js/modules/es6.object.assign.js"), require("/Users/brunodecoene/Documents/GitHub/Agency/node_modules/core-js/modules/es6.object.to-string.js"), require("/Users/brunodecoene/Documents/GitHub/Agency/node_modules/core-js/modules/es6.regexp.constructor.js"), require("/Users/brunodecoene/Documents/GitHub/Agency/node_modules/core-js/modules/es6.regexp.split.js"), require("/Users/brunodecoene/Documents/GitHub/Agency/node_modules/core-js/modules/es6.regexp.to-string.js"), require("/Users/brunodecoene/Documents/GitHub/Agency/node_modules/lodash/lodash.js"), require("react"), require("react-dom/server"));
 	else if(typeof define === 'function' && define.amd)
-		define("lib", ["C:\\Users\\OLIVIER\\Documents\\GitHub\\Agency\\node_modules\\core-js\\modules\\es6.object.assign.js", "C:\\Users\\OLIVIER\\Documents\\GitHub\\Agency\\node_modules\\core-js\\modules\\es6.object.to-string.js", "C:\\Users\\OLIVIER\\Documents\\GitHub\\Agency\\node_modules\\core-js\\modules\\es6.regexp.constructor.js", "C:\\Users\\OLIVIER\\Documents\\GitHub\\Agency\\node_modules\\core-js\\modules\\es6.regexp.split.js", "C:\\Users\\OLIVIER\\Documents\\GitHub\\Agency\\node_modules\\core-js\\modules\\es6.regexp.to-string.js", "C:\\Users\\OLIVIER\\Documents\\GitHub\\Agency\\node_modules\\lodash\\lodash.js", "react", "react-dom/server"], factory);
+		define("lib", ["/Users/brunodecoene/Documents/GitHub/Agency/node_modules/core-js/modules/es6.object.assign.js", "/Users/brunodecoene/Documents/GitHub/Agency/node_modules/core-js/modules/es6.object.to-string.js", "/Users/brunodecoene/Documents/GitHub/Agency/node_modules/core-js/modules/es6.regexp.constructor.js", "/Users/brunodecoene/Documents/GitHub/Agency/node_modules/core-js/modules/es6.regexp.split.js", "/Users/brunodecoene/Documents/GitHub/Agency/node_modules/core-js/modules/es6.regexp.to-string.js", "/Users/brunodecoene/Documents/GitHub/Agency/node_modules/lodash/lodash.js", "react", "react-dom/server"], factory);
 	else if(typeof exports === 'object')
-		exports["lib"] = factory(require("C:\\Users\\OLIVIER\\Documents\\GitHub\\Agency\\node_modules\\core-js\\modules\\es6.object.assign.js"), require("C:\\Users\\OLIVIER\\Documents\\GitHub\\Agency\\node_modules\\core-js\\modules\\es6.object.to-string.js"), require("C:\\Users\\OLIVIER\\Documents\\GitHub\\Agency\\node_modules\\core-js\\modules\\es6.regexp.constructor.js"), require("C:\\Users\\OLIVIER\\Documents\\GitHub\\Agency\\node_modules\\core-js\\modules\\es6.regexp.split.js"), require("C:\\Users\\OLIVIER\\Documents\\GitHub\\Agency\\node_modules\\core-js\\modules\\es6.regexp.to-string.js"), require("C:\\Users\\OLIVIER\\Documents\\GitHub\\Agency\\node_modules\\lodash\\lodash.js"), require("react"), require("react-dom/server"));
+		exports["lib"] = factory(require("/Users/brunodecoene/Documents/GitHub/Agency/node_modules/core-js/modules/es6.object.assign.js"), require("/Users/brunodecoene/Documents/GitHub/Agency/node_modules/core-js/modules/es6.object.to-string.js"), require("/Users/brunodecoene/Documents/GitHub/Agency/node_modules/core-js/modules/es6.regexp.constructor.js"), require("/Users/brunodecoene/Documents/GitHub/Agency/node_modules/core-js/modules/es6.regexp.split.js"), require("/Users/brunodecoene/Documents/GitHub/Agency/node_modules/core-js/modules/es6.regexp.to-string.js"), require("/Users/brunodecoene/Documents/GitHub/Agency/node_modules/lodash/lodash.js"), require("react"), require("react-dom/server"));
 	else
-		root["lib"] = factory(root["C:\\Users\\OLIVIER\\Documents\\GitHub\\Agency\\node_modules\\core-js\\modules\\es6.object.assign.js"], root["C:\\Users\\OLIVIER\\Documents\\GitHub\\Agency\\node_modules\\core-js\\modules\\es6.object.to-string.js"], root["C:\\Users\\OLIVIER\\Documents\\GitHub\\Agency\\node_modules\\core-js\\modules\\es6.regexp.constructor.js"], root["C:\\Users\\OLIVIER\\Documents\\GitHub\\Agency\\node_modules\\core-js\\modules\\es6.regexp.split.js"], root["C:\\Users\\OLIVIER\\Documents\\GitHub\\Agency\\node_modules\\core-js\\modules\\es6.regexp.to-string.js"], root["C:\\Users\\OLIVIER\\Documents\\GitHub\\Agency\\node_modules\\lodash\\lodash.js"], root["react"], root["react-dom/server"]);
+		root["lib"] = factory(root["/Users/brunodecoene/Documents/GitHub/Agency/node_modules/core-js/modules/es6.object.assign.js"], root["/Users/brunodecoene/Documents/GitHub/Agency/node_modules/core-js/modules/es6.object.to-string.js"], root["/Users/brunodecoene/Documents/GitHub/Agency/node_modules/core-js/modules/es6.regexp.constructor.js"], root["/Users/brunodecoene/Documents/GitHub/Agency/node_modules/core-js/modules/es6.regexp.split.js"], root["/Users/brunodecoene/Documents/GitHub/Agency/node_modules/core-js/modules/es6.regexp.to-string.js"], root["/Users/brunodecoene/Documents/GitHub/Agency/node_modules/lodash/lodash.js"], root["react"], root["react-dom/server"]);
 })(this, function(__WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_object_assign__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_object_to_string__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_regexp_constructor__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_regexp_split__, __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_regexp_to_string__, __WEBPACK_EXTERNAL_MODULE_lodash__, __WEBPACK_EXTERNAL_MODULE_react__, __WEBPACK_EXTERNAL_MODULE_react_dom_server__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -1503,9 +1503,9 @@ if (false) {} else {
 /***/ }),
 
 /***/ "core-js/modules/es6.object.assign":
-/*!**********************************************************************************************************************!*\
-  !*** external "C:\\Users\\OLIVIER\\Documents\\GitHub\\Agency\\node_modules\\core-js\\modules\\es6.object.assign.js" ***!
-  \**********************************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** external "/Users/brunodecoene/Documents/GitHub/Agency/node_modules/core-js/modules/es6.object.assign.js" ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1514,9 +1514,9 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_object_assign__;
 /***/ }),
 
 /***/ "core-js/modules/es6.object.to-string":
-/*!*************************************************************************************************************************!*\
-  !*** external "C:\\Users\\OLIVIER\\Documents\\GitHub\\Agency\\node_modules\\core-js\\modules\\es6.object.to-string.js" ***!
-  \*************************************************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** external "/Users/brunodecoene/Documents/GitHub/Agency/node_modules/core-js/modules/es6.object.to-string.js" ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1525,9 +1525,9 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_object_to_string_
 /***/ }),
 
 /***/ "core-js/modules/es6.regexp.constructor":
-/*!***************************************************************************************************************************!*\
-  !*** external "C:\\Users\\OLIVIER\\Documents\\GitHub\\Agency\\node_modules\\core-js\\modules\\es6.regexp.constructor.js" ***!
-  \***************************************************************************************************************************/
+/*!*********************************************************************************************************************!*\
+  !*** external "/Users/brunodecoene/Documents/GitHub/Agency/node_modules/core-js/modules/es6.regexp.constructor.js" ***!
+  \*********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1536,9 +1536,9 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_regexp_constructo
 /***/ }),
 
 /***/ "core-js/modules/es6.regexp.split":
-/*!*********************************************************************************************************************!*\
-  !*** external "C:\\Users\\OLIVIER\\Documents\\GitHub\\Agency\\node_modules\\core-js\\modules\\es6.regexp.split.js" ***!
-  \*********************************************************************************************************************/
+/*!***************************************************************************************************************!*\
+  !*** external "/Users/brunodecoene/Documents/GitHub/Agency/node_modules/core-js/modules/es6.regexp.split.js" ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1547,9 +1547,9 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_regexp_split__;
 /***/ }),
 
 /***/ "core-js/modules/es6.regexp.to-string":
-/*!*************************************************************************************************************************!*\
-  !*** external "C:\\Users\\OLIVIER\\Documents\\GitHub\\Agency\\node_modules\\core-js\\modules\\es6.regexp.to-string.js" ***!
-  \*************************************************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** external "/Users/brunodecoene/Documents/GitHub/Agency/node_modules/core-js/modules/es6.regexp.to-string.js" ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -1558,9 +1558,9 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_core_js_modules_es6_regexp_to_string_
 /***/ }),
 
 /***/ "lodash":
-/*!*************************************************************************************************!*\
-  !*** external "C:\\Users\\OLIVIER\\Documents\\GitHub\\Agency\\node_modules\\lodash\\lodash.js" ***!
-  \*************************************************************************************************/
+/*!********************************************************************************************!*\
+  !*** external "/Users/brunodecoene/Documents/GitHub/Agency/node_modules/lodash/lodash.js" ***!
+  \********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
