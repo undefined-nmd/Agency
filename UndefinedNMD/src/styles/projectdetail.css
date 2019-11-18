@@ -167,3 +167,22 @@ span.footer-info-general {
 .blank-div {
     width: 30%;
 }
+
+.home-btn{
+    float: right;
+    margin: 0 10% 20px 0;
+    font-size: 250%;
+    font-weight: 600;
+    bottom: 8%;
+    text-decoration: none;
+    color: black;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+  }
+
+@media only screen and (max-width: 480px) {
+    .content-box {
+        width: 100%;
+        text-align: justify;
+    }
+  }

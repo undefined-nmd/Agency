@@ -52,7 +52,7 @@ class About extends Component {
                         </p>
                     </div>
                 </div>
-                <a href="/#" className="undefined-copyright-contact">_defined</a>
+                <a href="/#" className="home-btn">_defined</a>
             </Layout>
         )
     }
