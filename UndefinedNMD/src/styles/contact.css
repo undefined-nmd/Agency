@@ -151,3 +151,24 @@ form {
     width: auto !important;
     float: right;
 }
+
+/* 900px */
+@media only screen and (max-width: 900px) {
+    .contactinfo-general{
+        margin-bottom: 20px;
+    }
+    
+    .rightside-button{
+        position: static;
+        right: 0;
+        bottom: 0;
+    }
+
+    .button-contact-us{
+        display: none;
+    }
+
+    .undefined-copyright-contact{
+        left: 10%;
+    }
+  }
