@@ -1,7 +1,7 @@
 exports.createPages = ({ actions }) => {
     actions.createRedirect({
         fromPath: `/roster`,
-        toPath: `/`,
+        toPath: `/index`,
         isPermanent: `true`,
     })
 }
