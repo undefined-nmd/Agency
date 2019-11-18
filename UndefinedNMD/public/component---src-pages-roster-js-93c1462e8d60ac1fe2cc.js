@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{"+0eP":function(n,e,t){"use strict";t.r(e);t("mXGw");e.default=function(){return window.location.href="http://undefinednmd.gdm.gent"}}}]);
+//# sourceMappingURL=component---src-pages-roster-js-93c1462e8d60ac1fe2cc.js.map
