@@ -29,7 +29,6 @@ class ProjectDetailPage extends Component {
         <div className="header-container">
           <div className={"hero-img-detail"}>
             <h1 className="project-title-detail">{this.props.projecttitle}</h1>
-            {/* {console.log(this.props.projectTitle)} */}
             <div className={"subtitles-detail"}>
               <h5 className={"subtitle-text-detail"}>By undefined</h5>
               <div className={"line-detail"}></div>
@@ -45,18 +44,13 @@ class ProjectDetailPage extends Component {
         </div>
         <div className="main-container">
           <p className="project-intro">
-            A brief intro about the project comes here. A brief intro about the
-            project comes here. A brief intro about the project comes here.
-    </p>
+            {this.props.projectsynopsis}
+          </p>
           <div className="content-box">
             <h3 className="project-subtitle">Visual identity</h3>
             <p className="project-text">
-              There are many variations of passages of Lorem Ipsum available, but
-              the majority have suffered alteration in some form, by injected
-              humour, or randomised words which don’t look even slightly believable.
-              If you are going to use a passage of Lorem Ipsum, you need to be sure
-              there isn’t anything embarrassing hidden in the middle of text.
-      </p>
+              {this.props.projectbody}
+            </p>
           </div>
         </div>
         <div className="image-container">
@@ -93,7 +87,7 @@ class ProjectDetailPage extends Component {
           </div>
           <div className="contact-action">
             <p className="action-title">Let us define your next project</p>
-            <a href="" className="action-button">Contact us</a>
+            <a href="/contact" className="action-button">Contact us</a>
           </div>
           <footer>
             <div className="footer-container-left">
