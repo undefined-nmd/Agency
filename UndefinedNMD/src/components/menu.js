@@ -19,7 +19,7 @@ class Menu extends Component {
                 <div className="row">
                     <div className="col">
                         <a className="nav-links" href="/teamPage" >Team</a>
-                        <a className="nav-links" href="/projects" >Projects</a>
+                        <a className="nav-links" href="/projectspage" >Projects</a>
                         <a className="nav-links" href="/about" >About</a>
                         <a className="nav-links" href="/contact" >Contact</a>
                     </div>

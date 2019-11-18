@@ -26,15 +26,16 @@
     width: auto;
 }
 
-.person-image-top{
+.person-image-top {
     height: 55vh;
     position: absolute;
-    top:0;
-    left:0;
-	overflow: hidden;
+    top: 0;
+    left: 0;
+    overflow: hidden;
 }
 
-.person-image-top, .person-image {
+.person-image-top,
+.person-image {
     width: 45%;
     border-radius: 10px;
     object-fit: cover;
@@ -43,22 +44,22 @@
 
 .center-row .swap-on-hover__front-image {
     z-index: 2;
-  }
-  
-  .center-row:hover > .swap-on-hover__front-image{
-    display:none;
-  }
+}
 
-  .center-row > .swap-on-hover__back-image{
+.center-row:hover>.swap-on-hover__front-image {
     display: none;
-  }
+}
 
-  .center-row:hover > .swap-on-hover__back-image{
+.center-row>.swap-on-hover__back-image {
+    display: none;
+}
+
+.center-row:hover>.swap-on-hover__back-image {
     display: block;
 }
 
-
-.person-data-div, .person-action-btn {
+.person-data-div,
+.person-action-btn {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -73,8 +74,16 @@
 }
 
 .person-action-btn {
-    width: 18px;
+    width: 14px;
     margin-top: -15vh;
+    transition: 0.2s ease-in-out;
+}
+
+.person-action-btn:hover {
+    transform: rotate(10deg);
+    transform: scale(1.2);
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
 }
 
 .person-name {
@@ -98,4 +107,3 @@
     margin-bottom: 20vh;
     font-weight: 100;
 }
-
