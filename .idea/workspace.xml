@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bfb3ed7f-634a-4773-afda-4a1021d3565d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.cache/sync-requires.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UndefinedNMD/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/2f0989236658e64424bd10c7b461aa93.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/58660bab9d5c3561217431de661173f4.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/9046b9fe7be82896bbecd8844d721feb.json.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/.cache/babel-loader/f0bab115ab5221c0825c56ea0150633f.json.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/.cache/__tests__/__snapshots__/dev-loader.js.snap" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/.cache/__tests__/__snapshots__/dev-loader.js.snap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/.cache/__tests__/__snapshots__/loader.js.snap" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/.cache/__tests__/__snapshots__/loader.js.snap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/.cache/__tests__/__snapshots__/static-entry.js.snap" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/.cache/__tests__/__snapshots__/static-entry.js.snap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/.cache/__tests__/dev-loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/.cache/__tests__/dev-loader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/.cache/__tests__/loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/.cache/__tests__/loader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/.cache/api-runner-browser-plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/.cache/api-runner-browser-plugins.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/.cache/api-runner-ssr.js" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/.cache/api-runner-ssr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/.cache/async-requires.js" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/.cache/async-requires.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/.cache/commonjs/error-overlay-handler.js" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/.cache/commonjs/error-overlay-handler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/.cache/commonjs/loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/.cache/commonjs/loader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/.cache/commonjs/production-app.js" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/.cache/commonjs/production-app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/.cache/commonjs/static-entry.js" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/.cache/commonjs/static-entry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/.cache/error-overlay-handler.js" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/.cache/error-overlay-handler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/.cache/loader.js" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/.cache/loader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/.cache/production-app.js" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/.cache/production-app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/.cache/redux.state" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/.cache/redux.state" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/.cache/static-entry.js" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/.cache/static-entry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/.cache/sync-requires.js" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/.cache/sync-requires.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/public/page-data/404.html/page-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/public/page-data/404.html/page-data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/public/page-data/404/page-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/public/page-data/404/page-data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/public/page-data/contact/page-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/public/page-data/contact/page-data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/public/page-data/dev-404-page/page-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/public/page-data/dev-404-page/page-data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/public/page-data/index/page-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/public/page-data/index/page-data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/public/page-data/page-2/page-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/public/page-data/page-2/page-data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/public/page-data/projectdetailpage/page-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/public/page-data/projectdetailpage/page-data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/public/page-data/schedule/page-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/public/page-data/schedule/page-data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/public/page-data/teamPage/page-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/public/page-data/teamPage/page-data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/src/components/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/src/components/menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/src/components/projectdetailpage.js" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/src/components/projectdetailpage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/src/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/src/styles/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/src/styles/projectdetail.css" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/src/styles/projectdetail.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/src/styles/projects.css" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/src/styles/projects.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UndefinedNMD/src/styles/teamPage.css" beforeDir="false" afterPath="$PROJECT_DIR$/UndefinedNMD/src/styles/teamPage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/render-page.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/render-page.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/render-page.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/render-page.js.map" afterDir="false" />
+    </list>
+    <list id="5e0c6ebc-f446-4c44-881d-b00c6de348dc" name="Revert &quot;firebase tegration&quot;" comment="Revert &quot;firebase tegration&quot;&#10;&#10;This reverts commit 32d0824f" />
+    <list id="06866799-bf62-4b66-8e4a-7b1d51b5ba61" name="Revert &quot;firebase tegration&quot;-2" comment="Revert &quot;firebase tegration&quot;&#10;&#10;This reverts commit 32d0824f" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="develop" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/UndefinedNMD/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="develop" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.develop" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
