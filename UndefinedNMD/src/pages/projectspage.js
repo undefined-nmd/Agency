@@ -14,15 +14,19 @@ class ProjectsPage extends Component {
         id: false,
         projectTitle: '',
         projectBody: '',
+        projectSynopsis: ''
     }
 
     setStateId = (item) => {
         let projectTitle = item.data.title
         let projectBody = item.data.body
+        let projectSynopsis = item.data.synopsis
+        console.log(projectSynopsis)
         this.setState({
             id: true,
             projectTitle: projectTitle,
             projectBody: projectBody,
+            projectSynopsis: projectSynopsis
         })
     }
 
@@ -69,8 +73,7 @@ class ProjectsPage extends Component {
             );
         } else {
             return (
-                <ProjectDetailPage projecttitle={this.state.projectTitle}>
-                    {/* {console.log(this.state.projectTitle + 'hey')} */}
+                <ProjectDetailPage projecttitle={this.state.projectTitle} projectbody={this.state.projectBody} projectsynopsis={this.state.projectSynopsis}>
                 </ProjectDetailPage>
             )
         }
