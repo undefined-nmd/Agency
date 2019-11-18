@@ -45,3 +45,8 @@
     border-radius: 0px;
     transition: 0.3s ease-in-out;
 }
+
+.add-fixed {
+    position: absolute;
+    right: 10%;
+}
