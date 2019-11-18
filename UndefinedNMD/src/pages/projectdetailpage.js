@@ -32,7 +32,7 @@ class ProjectDetailPage extends Component {
         </div>
         <div className="header-container">
           <div className={"hero-img-detail"}>
-            <h1 className="project-title-detail" projectTitle={this.props.projectTitle}></h1>
+            <h1 className="project-title-detail"></h1>
             <div className={"subtitles-detail"}>
               <h5 className={"subtitle-text-detail"}>By undefined</h5>
               <div className={"line-detail"}></div>

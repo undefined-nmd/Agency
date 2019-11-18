@@ -28,7 +28,8 @@ class ProjectDetailPage extends Component {
         </div>
         <div className="header-container">
           <div className={"hero-img-detail"}>
-            <h1 className="project-title-detail">Snak the museum</h1>
+            <h1 className="project-title-detail">{this.props.projecttitle}</h1>
+            {/* {console.log(this.props.projectTitle)} */}
             <div className={"subtitles-detail"}>
               <h5 className={"subtitle-text-detail"}>By undefined</h5>
               <div className={"line-detail"}></div>

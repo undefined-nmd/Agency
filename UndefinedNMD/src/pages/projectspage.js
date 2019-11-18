@@ -17,7 +17,6 @@ class ProjectsPage extends Component {
     }
 
     setStateId = (item) => {
-
         let projectTitle = item.data.title
         let projectBody = item.data.body
         this.setState({
@@ -70,9 +69,8 @@ class ProjectsPage extends Component {
             );
         } else {
             return (
-                <ProjectDetailPage projectTitle={this.state.projectTitle}>
-                    {/* {console.log(this.state.projectTitle)}
-                    {console.log(this.state.projectBody)} */}
+                <ProjectDetailPage projecttitle={this.state.projectTitle}>
+                    {/* {console.log(this.state.projectTitle + 'hey')} */}
                 </ProjectDetailPage>
             )
         }
