@@ -35,12 +35,6 @@ class ProjectDetailPage extends Component {
               <h5 className={"date-text-detail"}>2019</h5>
             </div>
           </div>
-          <nav>
-            <a href="/team">Team</a>
-            <a href="/contact">Contact</a>
-            <a href="/about">About</a>
-            <a href="/projectspage">Projects</a>
-          </nav>
         </div>
         <div className="main-container">
           <p className="project-intro">
@@ -76,34 +70,29 @@ class ProjectDetailPage extends Component {
           />
         </div>
         <div className="main-container">
-          <div className="content-box">
-            <h3 className="project-subtitle">Services</h3>
-            <ul className="project-text">
-              <li>Brand identity</li>
-              <li>UI / UX design</li>
-              <li>Visual design</li>
-              <li>Development</li>
-            </ul>
-          </div>
           <div className="contact-action">
             <p className="action-title">Let us define your next project</p>
             <a href="/contact" className="action-button">Contact us</a>
           </div>
           <footer>
             <div className="footer-container-left">
+              <h2>Contact</h2>
               <ul>
-                <li>Contact</li>
-                <li>Social</li>
+                <li className="footer-info-general">Hoogpoort 15</li>
+                <li className="footer-info-general">9000 Gent</li>
+                <li><a className="footer-info-general" href="mailto:info@arteveldehs.be">info@arteveldehs.be</a></li>
+                <li><a className="footer-info-general" href="tel:03292348600">09 234 86 00</a></li>
               </ul>
             </div>
-            <ul className="footer-container-center">
-              <li className="footer-info-general"><span className="footer-info-general">info@arteveldehs.be / 09 234 86 00</span></li>
-              <li className="footer-info-general"><span className="footer-info-general">Instagram / Facebook / LinkedIn / Twitter</span></li>
-              <li className="footer-info-general">Hoogpoort 15</li>
-              <li className="footer-info-general">9000 Gent</li>
-              <li className="footer-info-general">ONnr: 0474.120.360</li>
-              <li className="footer-info-general">BTWnr: BTW BE 0474.120.360</li>
-            </ul>
+            <div className="footer-container-center">
+              <h2>Socials</h2>
+              <ul>
+                  <li><a className="footer-info-general" target="blanc" href="https://www.instagram.com/undefinednmd/">Instagram </a></li>
+                  <li><a className="footer-info-general" target="blanc" href="https://www.facebook.com/undefinednmd/"> Facebook </a></li>
+                  <li><a className="footer-info-general" target="blanc" href="https://www.linkedin.com/in/undefined-nmd-122144194/"> LinkedIn </a></li>
+                  <li><a className="footer-info-general" target="blanc" href="https://www.twitter.com/UNDEFIN78240322"> Twitter</a></li>
+              </ul>
+            </div>
             <div className="blank"></div>
             <div className="undefined-copyright">_defined</div>
           </footer>

@@ -44,6 +44,7 @@
 .action-button:hover {
     border-radius: 0px;
     transition: 0.3s ease-in-out;
+    cursor: pointer;
 }
 
 .add-fixed {
