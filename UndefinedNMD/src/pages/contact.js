@@ -72,17 +72,25 @@ class ContactPage extends Component {
           <div className={'contactinfo'}>
             <div className={'contactinfo-contact'}>
               <h2 className="contact-h2">Contact</h2>
-              <p className="contact-p">info@arteveldehs.be / 09 234 86 00</p>
+              <div>
+                <a className="contact-p" href="mailto:info@arteveldehs.be">info@arteveldehs.be </a><span className="contact-p span-slash">/</span>
+                <a className="contact-p" href="tel:003292348600"> 09 234 86 00</a>
+              </div>
             </div>
             <div className={'contactinfo-social'}>
               <h2 className="contact-h2">Social</h2>
-              <p className="contact-p">Instagram / Facebook / LinkedIn / Twitter</p>
+              <div>
+                <a className="contact-p" target="blanc" href="https://www.instagram.com/undefinednmd/">Instagram </a><span className="contact-p span-slash">/</span>
+                <a className="contact-p" target="blanc" href="https://www.facebook.com/undefinednmd/"> Facebook </a><span className="contact-p span-slash">/</span>
+                <a className="contact-p" target="blanc" href="https://www.linkedin.com/in/undefined-nmd-122144194/"> LinkedIn </a><span className="contact-p span-slash">/</span>
+                <a className="contact-p" target="blanc" href="https://www.twitter.com/UNDEFIN78240322"> Twitter</a>
+              </div>
             </div>
             <div className={'contactinfo-general'}>
               <p>Hoogpoort 15</p>
               <p>9000 Gent</p>
               <p>ONnr: 0474.120.360</p>
-              <p>BTWnr: BTW BE 0474.120.360</p>
+              <p>BTWnr: BE 0474.120.360</p>
             </div>
           </div>
           <div className={'rightside-title'}>

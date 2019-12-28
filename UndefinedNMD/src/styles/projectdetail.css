@@ -71,7 +71,6 @@ nav a:hover {
 
 .main-container {
     padding: 0% 10%;
-    padding-top: 120px;
     font-family: sans-serif;
 }
 
@@ -96,10 +95,16 @@ nav a:hover {
 }
 
 .image-container {
-    margin-top: 120px;
+    width: 82%;
+    margin: 120px auto 0 auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+.image-container img{
+    margin: 1%;
+    width: 48%;
 }
 
 .project-image-sm {
@@ -144,14 +149,15 @@ footer {
     justify-content: space-between;
 }
 
-.footer-container-left ul li {
-    font-size: 150%;
-    line-height: 30px;
-}
-
 .footer-info-general {
     font-weight: 100;
     font-size: 80%;
+    color: black;
+    text-decoration: none;
+}
+
+.footer-info-general:hover{
+    color: #2C3CFF;
 }
 
 span.footer-info-general {
@@ -167,3 +173,22 @@ span.footer-info-general {
 .blank-div {
     width: 30%;
 }
+
+.home-btn{
+    float: right;
+    margin: 0 10% 20px 0;
+    font-size: 250%;
+    font-weight: 600;
+    bottom: 8%;
+    text-decoration: none;
+    color: black;
+    -webkit-transition: 0.2s ease-in-out;
+    transition: 0.2s ease-in-out;
+  }
+
+@media only screen and (max-width: 900px) {
+    .content-box {
+        width: 100%;
+        text-align: justify;
+    }
+  }

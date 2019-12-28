@@ -16,6 +16,8 @@
 
 .contact-p {
     font-weight: 100;
+    text-decoration: none;
+    color: hsla(0, 0%, 0%, 0.8);
 }
 
 .contactinfo-contact {
@@ -162,6 +164,7 @@ form {
         position: static;
         right: 0;
         bottom: 0;
+        width: 242px;
     }
 
     .button-contact-us{
@@ -170,5 +173,20 @@ form {
 
     .undefined-copyright-contact{
         left: 10%;
+    }
+
+    .span-slash{
+        display: inline;
+    }
+  }
+
+  @media screen and (max-height: 550px) {
+    .rightside-logo{
+        display: none;
+    }
+
+    .undefined-copyright-contact{
+        position: static;
+        margin: 0 0 8% 10%;
     }
   }
