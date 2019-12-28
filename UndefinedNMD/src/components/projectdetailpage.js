@@ -12,7 +12,6 @@ class ProjectDetailPage extends Component {
 
   getNavState = () => {
     this.setState(state => ({ navActive: !state.navActive }));
-    console.log('State change ! ! ! ');
   }
 
   render() {
