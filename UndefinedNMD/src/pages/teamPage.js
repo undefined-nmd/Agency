@@ -66,6 +66,7 @@ class TeamPage extends Component {
         return (
             <Layout>
                 <SEO title="Assignments" />
+                <a href="/#" className="undefined-copyright-contact">_defined</a>
                 <div className="col team-col">
                     <div className="margin-fix">
                         <Menu menustate={this.state.navActive} toggleNav={this.getNavState} />

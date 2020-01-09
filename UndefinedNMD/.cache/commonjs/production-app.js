@@ -1,12 +1,14 @@
 "use strict";
 
+var _interopRequireWildcard = require("@babel/runtime/helpers/interopRequireWildcard");
+
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
 var _apiRunnerBrowser = require("./api-runner-browser");
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
@@ -38,7 +40,7 @@ const loader = new _loader.ProdLoader(_asyncRequires.default, _matchPaths.defaul
 loader.setApiRunner(_apiRunnerBrowser.apiRunner);
 window.asyncRequires = _asyncRequires.default;
 window.___emitter = _emitter.default;
-window.___loader = _loader.publicLoader;
+window.___loader = loader;
 window.___webpackCompilationHash = window.webpackCompilationHash;
 (0, _navigation.init)();
 (0, _apiRunnerBrowser.apiRunnerAsync)(`onClientEntry`).then(() => {
@@ -46,26 +48,11 @@ window.___webpackCompilationHash = window.webpackCompilationHash;
   // to return true.
   if ((0, _apiRunnerBrowser.apiRunner)(`registerServiceWorker`).length > 0) {
     require(`./register-service-worker`);
-  } // In gatsby v2 if Router is used in page using matchPaths
-  // paths need to contain full path.
-  // For example:
-  //   - page have `/app/*` matchPath
-  //   - inside template user needs to use `/app/xyz` as path
-  // Resetting `basepath`/`baseuri` keeps current behaviour
-  // to not introduce breaking change.
-  // Remove this in v3
+  }
 
-
-  const RouteHandler = props => _react.default.createElement(_router.BaseContext.Provider, {
-    value: {
-      baseuri: `/`,
-      basepath: `/`
-    }
-  }, _react.default.createElement(_pageRenderer.default, props));
-
-  class LocationHandler extends _react.default.Component {
+  class RouteHandler extends _react.default.Component {
     render() {
-      const {
+      let {
         location
       } = this.props;
       return _react.default.createElement(_ensureResources.default, {
@@ -78,16 +65,10 @@ window.___webpackCompilationHash = window.webpackCompilationHash;
       }, _react.default.createElement(_gatsbyReactRouterScroll.ScrollContext, {
         location: location,
         shouldUpdateScroll: _navigation.shouldUpdateScroll
-      }, _react.default.createElement(_router.Router, {
-        basepath: __BASE_PATH__,
-        location: location,
-        id: "gatsby-focus-wrapper"
-      }, _react.default.createElement(RouteHandler, (0, _extends2.default)({
-        path: encodeURI(pageResources.page.path === `/404.html` ? (0, _stripPrefix.default)(location.pathname, __BASE_PATH__) : pageResources.page.matchPath || pageResources.page.path)
-      }, this.props, {
+      }, _react.default.createElement(_pageRenderer.default, (0, _extends2.default)({}, this.props, {
         location: location,
         pageResources: pageResources
-      }, pageResources.json))))));
+      }, pageResources.json)))));
     }
 
   }
@@ -103,18 +84,22 @@ window.___webpackCompilationHash = window.webpackCompilationHash;
   // - it's a 404 page
   // - it's the offline plugin shell (/offline-plugin-app-shell-fallback/)
 
-  if (pagePath && __BASE_PATH__ + pagePath !== browserLoc.pathname && !(loader.findMatchPath((0, _stripPrefix.default)(browserLoc.pathname, __BASE_PATH__)) || pagePath === `/404.html` || pagePath.match(/^\/404\/?$/) || pagePath.match(/^\/offline-plugin-app-shell-fallback\/?$/))) {
+  if (pagePath && __BASE_PATH__ + pagePath !== browserLoc.pathname && !(loader.pathFinder.findMatchPath((0, _stripPrefix.default)(browserLoc.pathname, __BASE_PATH__)) || pagePath === `/404.html` || pagePath.match(/^\/404\/?$/) || pagePath.match(/^\/offline-plugin-app-shell-fallback\/?$/))) {
     (0, _router.navigate)(__BASE_PATH__ + pagePath + browserLoc.search + browserLoc.hash, {
       replace: true
     });
   }
 
-  _loader.publicLoader.loadPage(browserLoc.pathname).then(page => {
+  loader.loadPage(browserLoc.pathname).then(page => {
     if (!page || page.status === `error`) {
       throw new Error(`page resources for ${browserLoc.pathname} not found. Not rendering React`);
     }
 
-    const Root = () => _react.default.createElement(_router.Location, null, locationContext => _react.default.createElement(LocationHandler, locationContext));
+    const Root = () => (0, _react.createElement)(_router.Router, {
+      basepath: __BASE_PATH__
+    }, (0, _react.createElement)(RouteHandler, {
+      path: `/*`
+    }));
 
     const WrappedRoot = (0, _apiRunnerBrowser.apiRunner)(`wrapRootElement`, {
       element: _react.default.createElement(Root, null)

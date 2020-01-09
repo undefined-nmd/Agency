@@ -129,9 +129,7 @@ function shouldUpdateScroll(prevRouterProps, { location }) {
     getSavedScrollPosition: args => this._stateStorage.read(args),
   })
   if (results.length > 0) {
-    // Use the latest registered shouldUpdateScroll result, this allows users to override plugin's configuration
-    // @see https://github.com/gatsbyjs/gatsby/issues/12038
-    return results[results.length - 1]
+    return results[0]
   }
 
   if (prevRouterProps) {
@@ -151,6 +149,7 @@ function init() {
   // Temp hack while awaiting https://github.com/reach/router/issues/119
   window.__navigatingToLink = false
 
+  window.___loader = loader
   window.___push = to => navigate(to, { replace: false })
   window.___replace = to => navigate(to, { replace: true })
   window.___navigate = (to, options) => navigate(to, options)
