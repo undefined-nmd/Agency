@@ -51,6 +51,7 @@ class ProjectsPage extends Component {
                     <SEO title="Home" />
                     <Menu menustate={this.state.navActive} toggleNav={this.getNavState} />
                     <div className={'main-container-project-list'}>
+                        {/* <a href="/#`" className="undefined-copyright-contact">_defined</a> */}
                         <div className="toggle-nav reduce-width-float add-fixed" onClick={this.getNavState}>
                             <div className="nav-line-top"></div>
                             <div className="nav-line-bottom"></div>

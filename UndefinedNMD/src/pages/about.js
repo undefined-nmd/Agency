@@ -37,19 +37,21 @@ class About extends Component {
             <Layout>
                 <SEO title="Assignments" />
                 <Menu menustate={this.state.navActive} toggleNav={this.getNavState} />
-                <div className="main-container">
-                    <div className="toggle-nav reduce-width-float add-fixed" onClick={this.getNavState}>
-                        <div className="nav-line-top"></div>
-                        <div className="nav-line-bottom"></div>
-                    </div>
-                    <p className="project-intro">
-                        {this.state.content[0] ? this.state.content[0].data.synopsis : 'Rendering...'}
-                    </p>
-                    <div className="content-box">
-                        <h3 className="project-subtitle">{this.state.content[0] ? this.state.content[0].data.title : 'Rendering...'}</h3>
-                        <p className="project-text">
-                            {this.state.content[0] ? this.state.content[0].data.body : 'Rendering...'}
+                <div className={'contact-container'}>
+                    <div className="main-container">
+                        <div className="toggle-nav reduce-width-float add-fixed" onClick={this.getNavState}>
+                            <div className="nav-line-top"></div>
+                            <div className="nav-line-bottom"></div>
+                        </div>
+                        <p className="project-intro">
+                            {this.state.content[0] ? this.state.content[0].data.synopsis : 'Rendering...'}
                         </p>
+                        <div className="content-box">
+                            <h3 className="project-subtitle">{this.state.content[0] ? this.state.content[0].data.title : 'Rendering...'}</h3>
+                            <p className="project-text">
+                                {this.state.content[0] ? this.state.content[0].data.body : 'Rendering...'}
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <a href="/#" className="home-btn">_defined</a>

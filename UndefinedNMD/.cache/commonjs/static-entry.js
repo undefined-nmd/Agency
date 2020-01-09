@@ -3,7 +3,7 @@
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 exports.__esModule = true;
-exports.default = exports.sanitizeComponents = void 0;
+exports.default = void 0;
 
 var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
 
@@ -31,9 +31,7 @@ const {
   merge,
   isObject,
   flatten,
-  uniqBy,
-  flattenDeep,
-  replace
+  uniqBy
 } = require(`lodash`);
 
 const apiRunner = require(`./api-runner-ssr`);
@@ -101,26 +99,9 @@ const loadPageDataSync = pagePath => {
 const createElement = React.createElement;
 
 const sanitizeComponents = components => {
-  const componentsArray = ensureArray(components);
-  return componentsArray.map(component => {
-    // Ensure manifest is always loaded from content server
-    // And not asset server when an assetPrefix is used
-    if (__ASSET_PREFIX__ && component.props.rel === `manifest`) {
-      return React.cloneElement(component, {
-        href: replace(component.props.href, __ASSET_PREFIX__, ``)
-      });
-    }
-
-    return component;
-  });
-};
-
-exports.sanitizeComponents = sanitizeComponents;
-
-const ensureArray = components => {
   if (Array.isArray(components)) {
-    // remove falsy items and flatten
-    return flattenDeep(components.filter(val => Array.isArray(val) ? val.length > 0 : val));
+    // remove falsy items
+    return components.filter(val => Array.isArray(val) ? val.length > 0 : val);
   } else {
     // we also accept single components, so we need to handle this case as well
     return components ? [components] : [];
@@ -195,7 +176,7 @@ var _default = (pagePath, callback) => {
 
   class RouteHandler extends React.Component {
     render() {
-      const props = Object.assign({}, this.props, {}, pageData.result, {
+      const props = Object.assign({}, this.props, pageData.result, {
         // pathContext was deprecated in v2. Renamed to pageContext
         pathContext: pageData.result ? pageData.result.pageContext : undefined
       });
@@ -219,7 +200,6 @@ var _default = (pagePath, callback) => {
   const routerElement = createElement(ServerLocation, {
     url: `${__BASE_PATH__}${pagePath}`
   }, createElement(Router, {
-    id: `gatsby-focus-wrapper`,
     baseuri: `${__BASE_PATH__}`
   }, createElement(RouteHandler, {
     path: `/*`
@@ -329,7 +309,7 @@ var _default = (pagePath, callback) => {
       rel: "preload",
       key: pageDataUrl,
       href: pageDataUrl,
-      crossOrigin: "anonymous"
+      crossOrigin: "use-credentials"
     }));
   }
 

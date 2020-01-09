@@ -5,11 +5,13 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 exports.__esModule = true;
 exports.default = exports.publicLoader = exports.setLoader = exports.ProdLoader = exports.BaseLoader = void 0;
 
+require("core-js/modules/es7.promise.finally");
+
 var _prefetch = _interopRequireDefault(require("./prefetch"));
 
 var _emitter = _interopRequireDefault(require("./emitter"));
 
-var _findPath = require("./find-path");
+var _findPath = _interopRequireDefault(require("./find-path"));
 
 const preferDefault = m => m && m.default || m;
 
@@ -27,6 +29,7 @@ const createPageDataUrl = path => {
 const doFetch = (url, method = `GET`) => new Promise((resolve, reject) => {
   const req = new XMLHttpRequest();
   req.open(method, url, true);
+  req.withCredentials = true;
 
   req.onreadystatechange = () => {
     if (req.readyState == 4) {
@@ -47,26 +50,19 @@ const loadPageDataJson = loadObj => {
     const {
       status,
       responseText
-    } = req; // Handle 200
+    } = req;
+    const contentType = req.getResponseHeader(`content-type`);
+    const isJson = contentType && contentType.startsWith(`application/json`); // Handle 200 JSON (Success)
 
-    if (status === 200) {
-      try {
-        const jsonPayload = JSON.parse(responseText);
-
-        if (jsonPayload.webpackCompilationHash === undefined) {
-          throw new Error(`not a valid pageData response`);
-        }
-
-        return Object.assign(loadObj, {
-          status: `success`,
-          payload: jsonPayload
-        });
-      } catch (err) {// continue regardless of error
-      }
+    if (status === 200 && isJson) {
+      return Object.assign(loadObj, {
+        status: `success`,
+        payload: JSON.parse(responseText)
+      });
     } // Handle 404
 
 
-    if (status === 404 || status === 200) {
+    if (status === 404 || status === 200 && !isJson) {
       // If the request was for a 404 page and it doesn't exist, we're done
       if (pagePath === `/404.html`) {
         return Object.assign(loadObj, {
@@ -104,7 +100,7 @@ const loadPageDataJson = loadObj => {
 };
 
 const doesConnectionSupportPrefetch = () => {
-  if (`connection` in navigator && typeof navigator.connection !== `undefined`) {
+  if (`connection` in navigator) {
     if ((navigator.connection.effectiveType || ``).includes(`2g`)) {
       return false;
     }
@@ -121,8 +117,7 @@ const toPageResources = (pageData, component = null) => {
   const page = {
     componentChunkName: pageData.componentChunkName,
     path: pageData.path,
-    webpackCompilationHash: pageData.webpackCompilationHash,
-    matchPath: pageData.matchPath
+    webpackCompilationHash: pageData.webpackCompilationHash
   };
   return {
     component,
@@ -152,7 +147,7 @@ class BaseLoader {
     this.prefetchTriggered = new Set();
     this.prefetchCompleted = new Set();
     this.loadComponent = loadComponent;
-    (0, _findPath.setMatchPaths)(matchPaths);
+    this.pathFinder = new _findPath.default(matchPaths);
   }
 
   setApiRunner(apiRunner) {
@@ -161,7 +156,7 @@ class BaseLoader {
   }
 
   loadPageDataJson(rawPath) {
-    const pagePath = (0, _findPath.findPath)(rawPath);
+    const pagePath = this.pathFinder.find(rawPath);
 
     if (this.pageDataDb.has(pagePath)) {
       return Promise.resolve(this.pageDataDb.get(pagePath));
@@ -173,15 +168,11 @@ class BaseLoader {
       this.pageDataDb.set(pagePath, pageData);
       return pageData;
     });
-  }
-
-  findMatchPath(rawPath) {
-    return (0, _findPath.findMatchPath)(rawPath);
   } // TODO check all uses of this and whether they use undefined for page resources not exist
 
 
   loadPage(rawPath) {
-    const pagePath = (0, _findPath.findPath)(rawPath);
+    const pagePath = this.pathFinder.find(rawPath);
 
     if (this.pageDb.has(pagePath)) {
       const page = this.pageDb.get(pagePath);
@@ -236,13 +227,8 @@ class BaseLoader {
 
         return pageResources;
       });
-    }) // prefer duplication with then + catch over .finally to prevent problems in ie11 + firefox
-    .then(response => {
+    }).finally(() => {
       this.inFlightDb.delete(pagePath);
-      return response;
-    }).catch(err => {
-      this.inFlightDb.delete(pagePath);
-      throw err;
     });
     this.inFlightDb.set(pagePath, inFlight);
     return inFlight;
@@ -250,7 +236,7 @@ class BaseLoader {
 
 
   loadPageSync(rawPath) {
-    const pagePath = (0, _findPath.findPath)(rawPath);
+    const pagePath = this.pathFinder.find(rawPath);
 
     if (this.pageDb.has(pagePath)) {
       return this.pageDb.get(pagePath).payload;
@@ -260,7 +246,12 @@ class BaseLoader {
   }
 
   shouldPrefetch(pagePath) {
-    // Skip prefetching if we know user is on slow or constrained connection
+    // If a plugin has disabled core prefetching, stop now.
+    if (this.prefetchDisabled) {
+      return false;
+    } // Skip prefetching if we know user is on slow or constrained connection
+
+
     if (!doesConnectionSupportPrefetch()) {
       return false;
     } // Check if the page exists.
@@ -285,22 +276,17 @@ class BaseLoader {
         pathname: pagePath
       });
       this.prefetchTriggered.add(pagePath);
-    } // If a plugin has disabled core prefetching, stop now.
-
-
-    if (this.prefetchDisabled) {
-      return false;
     }
 
-    const realPath = (0, _findPath.findPath)(pagePath); // Todo make doPrefetch logic cacheable
-    // eslint-disable-next-line consistent-return
+    this.doPrefetch(pagePath).then(pageData => {
+      const realPath = this.pathFinder.find(pagePath);
 
-    this.doPrefetch(realPath).then(() => {
-      if (!this.prefetchCompleted.has(pagePath)) {
+      if (!this.prefetchCompleted.has(realPath)) {
         this.apiRunner(`onPostPrefetchPathname`, {
           pathname: pagePath
         });
-        this.prefetchCompleted.add(pagePath);
+        const realPath = this.pathFinder.find(pagePath);
+        this.prefetchCompleted.add(realPath);
       }
     });
     return true;
@@ -315,7 +301,7 @@ class BaseLoader {
   }
 
   getResourceURLsForPathname(rawPath) {
-    const pagePath = (0, _findPath.findPath)(rawPath);
+    const pagePath = this.pathFinder.find(rawPath);
     const page = this.pageDataDb.get(pagePath);
 
     if (page) {
@@ -327,7 +313,7 @@ class BaseLoader {
   }
 
   isPageNotFound(rawPath) {
-    const pagePath = (0, _findPath.findPath)(rawPath);
+    const pagePath = this.pathFinder.find(rawPath);
     const page = this.pageDb.get(pagePath);
     return page && page.notFound === true;
   }
