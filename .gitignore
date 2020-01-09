@@ -11,3 +11,4 @@ UndefinedNMD/public/page-data/dev-404-page/page-data.json
 UndefinedNMD/src/pages/projectspage.js
 node_modules
 node_modules
+*.state
