@@ -16,7 +16,8 @@ class ContactPage extends Component {
         message: ''
       },
       formActive: false,
-      navActive: false
+      navActive: false,
+      formSent: false
     }
     this.handleChange = this.handleChange.bind(this);
   }
@@ -50,6 +51,10 @@ class ContactPage extends Component {
       .catch(function (error) {
         console.log(error);
       });
+    this.setState({
+      formActive: false,
+      formSent: true,
+    })
   }
 
   render() {
@@ -97,7 +102,7 @@ class ContactPage extends Component {
             {/* <h1>Contact</h1> */}
           </div>
           <div className={'rightside-button'}>
-            <p className="action-button-contact-page add-btn-padding" onClick={this.getFormState}>Your question?</p>
+            <p className="action-button-contact-page add-btn-padding" onClick={this.getFormState}>{this.state.formSent ? 'Message Sent!' : 'Your question?'}</p>
           </div>
         </div>
         <div className={'rightside-logo'}>
@@ -105,7 +110,7 @@ class ContactPage extends Component {
         <a href="/#" className="undefined-copyright-contact">_defined</a>
         <div className={formState ? showHideForm.showForm : showHideForm.hideForm}>
           <form>
-            <h3 className="project-subtitle">Ask us a anything</h3>
+            <h3 className="project-subtitle">Ask us anything</h3>
             <div className="close-form" onClick={this.getFormState}>
               <div className="close-nav-top"></div>
               <div className="close-nav-bottom"></div>
