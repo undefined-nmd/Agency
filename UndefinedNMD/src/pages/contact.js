@@ -97,7 +97,7 @@ class ContactPage extends Component {
             {/* <h1>Contact</h1> */}
           </div>
           <div className={'rightside-button'}>
-            <p className="action-button add-btn-padding" onClick={this.getFormState}>Your question?</p>
+            <p className="action-button-contact-page add-btn-padding" onClick={this.getFormState}>Your question?</p>
           </div>
         </div>
         <div className={'rightside-logo'}>
@@ -113,7 +113,7 @@ class ContactPage extends Component {
             <input type="text" placeholder="Name" onChange={(e) => this.handleChange(e, 'name')} className="question-form-input con-form-name-val" />
             <input type="email" placeholder="Email" onChange={(e) => this.handleChange(e, 'email')} className="question-form-input" />
             <textarea type="text" rows="4" cols="50" placeholder="Your message" onChange={(e) => this.handleChange(e, 'message')} className="question-form-input question-form-textarea" />
-            <p className="action-button center-action-btn" onClick={this.submitForm}>Send</p>
+            <p className="action-button-contact-page center-action-btn" onClick={this.submitForm}>Send</p>
           </form>
         </div>
       </Layout>

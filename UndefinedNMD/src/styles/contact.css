@@ -51,7 +51,7 @@
 }
 
 .add-btn-padding {
-    padding: 20px 70px !important;
+    width: 230px;
 }
 
 
@@ -191,3 +191,26 @@ form {
         margin: 0 0 8% 10%;
     }
   }
+
+  .action-button-contact-page {
+    background: #2C3CFF;
+    color: white;
+    padding: 10px 40px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    position: absolute;
+    right: 8%;
+    top: 75%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-button-contact-page:hover {
+    border-radius: 0px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    background-color: #0f1a9a;
+}

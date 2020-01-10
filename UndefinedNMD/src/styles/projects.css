@@ -38,6 +38,26 @@
     height: 5%;
 }
 
+.action-button-page-section {
+    background: #2C3CFF;
+    color: white;
+    padding: 10px 40px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-button-page-section:hover {
+    border-radius: 0px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    background-color: #0f1a9a;
+}
+
 .action-button {
     background: #2C3CFF;
     color: white;

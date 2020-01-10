@@ -25,8 +25,8 @@ class ProjectDetailPage extends Component {
         <Menu menustate={this.state.navActive} toggleNav={this.getNavState} />
         <div className="fixed-div">
           <div className="toggle-nav reduce-width-float" onClick={this.getNavState}>
-            <div className="nav-line-top"/>
-            <div className="nav-line-bottom"/>
+            <div className="nav-line-top" />
+            <div className="nav-line-bottom" />
           </div>
         </div>
         <div className="header-container">
@@ -53,17 +53,17 @@ class ProjectDetailPage extends Component {
         <div className="image-container">
           {this.props.projectimages.map((image, key) =>
             <img
-            src={image}
-            alt=""
-            key={key}
-            className="project-image-sm"
+              src={image}
+              alt=""
+              key={key}
+              className="project-image-sm"
             />
           )}
         </div>
         <div className="main-container">
           <div className="contact-action">
             <p className="action-title">Let us define your next project</p>
-            <a href="/contact" className="action-button">Contact us</a>
+            <a href="/contact" className="action-button-page-section">Contact us</a>
           </div>
           <footer>
             <div className="footer-container-left">
@@ -78,10 +78,10 @@ class ProjectDetailPage extends Component {
             <div className="footer-container-center">
               <h2>Socials</h2>
               <ul>
-                  <li><a className="footer-info-general" target="blanc" href="https://www.instagram.com/undefinednmd/">Instagram </a></li>
-                  <li><a className="footer-info-general" target="blanc" href="https://www.facebook.com/undefinednmd/"> Facebook </a></li>
-                  <li><a className="footer-info-general" target="blanc" href="https://www.linkedin.com/in/undefined-nmd-122144194/"> LinkedIn </a></li>
-                  <li><a className="footer-info-general" target="blanc" href="https://www.twitter.com/UNDEFIN78240322"> Twitter</a></li>
+                <li><a className="footer-info-general" target="blanc" href="https://www.instagram.com/undefinednmd/">Instagram </a></li>
+                <li><a className="footer-info-general" target="blanc" href="https://www.facebook.com/undefinednmd/"> Facebook </a></li>
+                <li><a className="footer-info-general" target="blanc" href="https://www.linkedin.com/in/undefined-nmd-122144194/"> LinkedIn </a></li>
+                <li><a className="footer-info-general" target="blanc" href="https://www.twitter.com/UNDEFIN78240322"> Twitter</a></li>
               </ul>
             </div>
             <div className="blank"></div>
