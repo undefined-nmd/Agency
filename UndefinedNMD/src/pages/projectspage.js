@@ -56,8 +56,8 @@ class ProjectsPage extends Component {
                     <div className={'main-container-project-list'}>
                         {/* <a href="/#`" className="undefined-copyright-contact">_defined</a> */}
                         <div className="toggle-nav reduce-width-float add-fixed" onClick={this.getNavState}>
-                            <div className="nav-line-top"/>
-                            <div className="nav-line-bottom"/>
+                            <div className="nav-line-top" />
+                            <div className="nav-line-bottom" />
                         </div>
                         {this.state && this.state.projects && this.state.projects.map((item, index) => {
                             // Mapping the project thumbnails/previews
@@ -66,7 +66,7 @@ class ProjectsPage extends Component {
                                     <h2 className="project-list-title">{item.data.title}</h2>
                                     <div className="project-list-row">
                                         <img src={item.data.images[0] ? item.data.images[0] : 'https://firebasestorage.googleapis.com/v0/b/undefined-baas.appspot.com/o/resized%2Ftumblr_n7jz4u5Fgd1ql2g28o1_500_1280x1280.jpg?alt=media&token=16672718-2b3c-493f-a1f0-f6cab1d8eaaa'} className="project-list-image" alt={'project-img'} />
-                                        <p className="action-button edit-height" onClick={() => this.setStateId(item)}>View project</p>
+                                        <p className="action-button-page-section edit-height" onClick={() => this.setStateId(item)}>View project</p>
                                     </div>
                                     <p className="project-list-slug">{item.data.synopsis ? item.data.synopsis : ''}</p>
                                 </div>

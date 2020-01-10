@@ -7,11 +7,13 @@
 .project-list-container {
     display: flex;
     flex-direction: column;
+    margin-bottom: 90px;
 }
 
 .project-list-row {
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
 .project-list-title {
@@ -20,16 +22,40 @@
 }
 
 .project-list-image {
-    width: 45%;
+    width: 60%;
     border-radius: 20px;
+    height: 33vh;
+    object-fit: cover;
 }
 
 .project-list-slug {
+    margin-top: 25px;
     font-weight: 100;
+    width: 60%;
 }
 
 .edit-height {
     height: 5%;
+}
+
+.action-button-page-section {
+    background: #2C3CFF;
+    color: white;
+    padding: 10px 40px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-button-page-section:hover {
+    border-radius: 0px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    background-color: #0f1a9a;
 }
 
 .action-button {
@@ -39,12 +65,20 @@
     border-radius: 10px;
     text-decoration: none;
     transition: 0.3s ease-in-out;
+    position: absolute;
+    left: 55%;
+    top: 75%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .action-button:hover {
     border-radius: 0px;
     transition: 0.3s ease-in-out;
     cursor: pointer;
+    background-color: #0f1a9a;
 }
 
 .add-fixed {
