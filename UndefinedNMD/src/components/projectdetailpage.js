@@ -14,6 +14,10 @@ class ProjectDetailPage extends Component {
     this.setState(state => ({ navActive: !state.navActive }));
   }
 
+  componentDidMount() {
+    console.log(this.props)
+  }
+
   render() {
     return (
       <Layout>
@@ -21,8 +25,8 @@ class ProjectDetailPage extends Component {
         <Menu menustate={this.state.navActive} toggleNav={this.getNavState} />
         <div className="fixed-div">
           <div className="toggle-nav reduce-width-float" onClick={this.getNavState}>
-            <div className="nav-line-top"></div>
-            <div className="nav-line-bottom"></div>
+            <div className="nav-line-top"/>
+            <div className="nav-line-bottom"/>
           </div>
         </div>
         <div className="header-container">
@@ -47,26 +51,14 @@ class ProjectDetailPage extends Component {
           </div>
         </div>
         <div className="image-container">
-          <img
-            src={require("../images/tumblr_n7jz4u5Fgd1ql2g28o1_500.jpg")}
+          {this.props.projectimages.map((image, key) =>
+            <img
+            src={image}
             alt=""
+            key={key}
             className="project-image-sm"
-          />
-          <img
-            src={require("../images/tumblr_n7jz4u5Fgd1ql2g28o1_500.jpg")}
-            alt=""
-            className="project-image-sm"
-          />
-          <img
-            src={require("../images/tumblr_n7jz4u5Fgd1ql2g28o1_500.jpg")}
-            alt=""
-            className="project-image-sm"
-          />
-          <img
-            src={require("../images/tumblr_n7jz4u5Fgd1ql2g28o1_500.jpg")}
-            alt=""
-            className="project-image-sm"
-          />
+            />
+          )}
         </div>
         <div className="main-container">
           <div className="contact-action">
