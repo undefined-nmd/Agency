@@ -12,3 +12,6 @@ UndefinedNMD/src/pages/projectspage.js
 node_modules
 node_modules
 *.state
+.idea/dictionaries/jonasstasseyns.xml
+.idea/vcs.xml
+UndefinedNMD/.cache/redux.state
