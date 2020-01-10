@@ -7,7 +7,6 @@ import axios from 'axios'
 import ProjectDetailPage from "../components/projectdetailpage";
 
 class ProjectsPage extends Component {
-
     state = {
         navActive: false,
         projects: [],
@@ -38,8 +37,8 @@ class ProjectsPage extends Component {
     }
 
     componentDidMount() {
+        // Execute a GET request to the cloud functions REST api to get the projects
         axios.get('https://undefined-baas.firebaseapp.com/api/projects').then((snap) => {
-            // console.log(snap.data.data)
             this.setState({
                 projects: snap.data.data
             })
@@ -47,6 +46,8 @@ class ProjectsPage extends Component {
     }
 
     render() {
+        // Check if this.state.id is set (which means a project has been clicked) and if that's the case,
+        // the project component will be loaded instead of the list
         if (!this.state.id) {
             return (
                 <Layout>
@@ -58,8 +59,8 @@ class ProjectsPage extends Component {
                             <div className="nav-line-top" />
                             <div className="nav-line-bottom" />
                         </div>
-
                         {this.state && this.state.projects && this.state.projects.map((item, index) => {
+                            // Mapping the project thumbnails/previews
                             return (
                                 <div className="project-list-container" key={index}>
                                     <h2 className="project-list-title">{item.data.title}</h2>
@@ -75,8 +76,8 @@ class ProjectsPage extends Component {
                 </Layout>
             );
         } else {
-            console.log(this.state.images)
             return (
+                // Loading the projectdetailpage component while passing the data through props
                 <ProjectDetailPage projecttitle={this.state.projectTitle} projectbody={this.state.projectBody} projectsynopsis={this.state.projectSynopsis} projectimages={this.state.projectImages}>
                 </ProjectDetailPage>
             )
