@@ -151,8 +151,14 @@ form {
 }
 
 .reduce-width-float {
-    width: auto !important;
+    width: 75px !important;
     float: right;
+    padding: 2% 0% !important;
+    position: fixed !important;
+    display: flex !important;
+    justify-content: space-around !important;
+    align-items: center;
+    z-index: 100;
 }
 
 /* 900px */
