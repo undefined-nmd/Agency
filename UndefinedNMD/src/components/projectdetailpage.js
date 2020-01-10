@@ -5,9 +5,11 @@ import SEO from "../components/seo"
 import Menu from '../components/menu'
 
 class ProjectDetailPage extends Component {
-
   state = {
     navActive: false,
+    heroStyle: {
+      backgroundImage: `url(${this.props.projectimages[0]})`
+    }
   }
 
   getNavState = () => {
@@ -16,6 +18,7 @@ class ProjectDetailPage extends Component {
 
   componentDidMount() {
     console.log(this.props)
+    console.log(this.state.heroStyle)
   }
 
   render() {
@@ -31,11 +34,11 @@ class ProjectDetailPage extends Component {
           </div>
         </div>
         <div className="header-container">
-          <div className={"hero-img-detail"}>
+          <div className={"hero-img-detail"} style={this.state.heroStyle}>
             <h1 className="project-title-detail">{this.props.projecttitle}</h1>
             <div className={"subtitles-detail"}>
               <h5 className={"subtitle-text-detail"}>By undefined</h5>
-              <div className={"line-detail"}></div>
+              <div className={"line-detail"}/>
               <h5 className={"date-text-detail"}>2019</h5>
             </div>
           </div>
@@ -45,15 +48,14 @@ class ProjectDetailPage extends Component {
             {this.props.projectsynopsis}
           </p>
           <div className="content-box">
-            <h3 className="project-subtitle">Visual identity</h3>
+            <h3 className="project-subtitle">{this.props.projecttitle}</h3>
             <p className="project-text">
               {this.props.projectbody}
             </p>
           </div>
         </div>
         <div className="image-container">
-          // Mapping all images in the firestore document
-          // TODO Catch the case that no images are in firestore
+          {/*TODO Catch 'no images in firestore'*/}
           {this.props.projectimages.map((image, key) =>
             <img
               src={image}
