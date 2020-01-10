@@ -38,7 +38,7 @@ class ProjectDetailPage extends Component {
             <h1 className="project-title-detail">{this.props.projecttitle}</h1>
             <div className={"subtitles-detail"}>
               <h5 className={"subtitle-text-detail"}>By undefined</h5>
-              <div className={"line-detail"}/>
+              <div className={"line-detail"} />
               <h5 className={"date-text-detail"}>2019</h5>
             </div>
           </div>
@@ -90,7 +90,8 @@ class ProjectDetailPage extends Component {
               </ul>
             </div>
             <div className="blank"></div>
-            <div className="undefined-copyright">_defined</div>
+            {/* <div className="undefined-copyright">_defined</div> */}
+            <a href="/#" className="home-btn">_defined</a>
           </footer>
         </div>
       </Layout>

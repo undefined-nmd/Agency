@@ -1,7 +1,7 @@
 .fixed-div {
     position: fixed;
-    right: 5%;
-    top: 5%;
+    right: 10%;
+    top: 10%;
 }
 
 .header-container {
@@ -147,6 +147,7 @@ nav a:hover {
 footer {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 100px;
 }
 
 .footer-info-general {
