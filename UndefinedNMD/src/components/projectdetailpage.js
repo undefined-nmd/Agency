@@ -19,6 +19,7 @@ class ProjectDetailPage extends Component {
   }
 
   render() {
+    // TODO Make the nav more component-ish
     return (
       <Layout>
         <SEO title="Assignments" />
@@ -51,6 +52,8 @@ class ProjectDetailPage extends Component {
           </div>
         </div>
         <div className="image-container">
+          // Mapping all images in the firestore document
+          // TODO Catch the case that no images are in firestore
           {this.props.projectimages.map((image, key) =>
             <img
             src={image}
