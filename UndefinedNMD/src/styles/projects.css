@@ -83,5 +83,9 @@
 
 .add-fixed {
     position: absolute;
-    right: 10%;
+    right: 10vw;
+}
+
+.projects-page-higher {
+    top: 8vh;
 }

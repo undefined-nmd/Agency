@@ -37,7 +37,7 @@ class ProjectsPage extends Component {
     }
 
     componentDidMount() {
-        // Execute a GET request to the cloud functions REST api to get the projects
+        // Executing a GET request to the cloud functions REST api to get the projects
         axios.get('https://undefined-baas.firebaseapp.com/api/projects').then((snap) => {
             this.setState({
                 projects: snap.data.data
@@ -55,7 +55,7 @@ class ProjectsPage extends Component {
                     <Menu menustate={this.state.navActive} toggleNav={this.getNavState} />
                     <div className={'main-container-project-list'}>
                         {/* <a href="/#`" className="undefined-copyright-contact">_defined</a> */}
-                        <div className="toggle-nav reduce-width-float add-fixed" onClick={this.getNavState}>
+                        <div className="toggle-nav add-fixed projects-page-higher" onClick={this.getNavState}>
                             <div className="nav-line-top" />
                             <div className="nav-line-bottom" />
                         </div>
