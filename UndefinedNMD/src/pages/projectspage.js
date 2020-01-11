@@ -5,6 +5,7 @@ import "../styles/projects.css"
 import SEO from "../components/seo"
 import axios from 'axios'
 import ProjectDetailPage from "../components/projectdetailpage";
+import FadeIn from "react-fade-in";
 
 class ProjectsPage extends Component {
     state = {
@@ -78,8 +79,9 @@ class ProjectsPage extends Component {
         } else {
             return (
                 // Loading the projectdetailpage component while passing the data through props
-                <ProjectDetailPage projecttitle={this.state.projectTitle} projectbody={this.state.projectBody} projectsynopsis={this.state.projectSynopsis} projectimages={this.state.projectImages}>
-                </ProjectDetailPage>
+              <FadeIn>
+                  <ProjectDetailPage projecttitle={this.state.projectTitle} projectbody={this.state.projectBody} projectsynopsis={this.state.projectSynopsis} projectimages={this.state.projectImages}/>
+              </FadeIn>
             )
         }
     }

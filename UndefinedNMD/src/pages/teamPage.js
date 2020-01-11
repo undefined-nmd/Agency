@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import "../styles/teamPage.css"
 import SEO from "../components/seo"
 import axios from 'axios';
+import FadeIn from 'react-fade-in'
 
 class TeamPage extends Component {
 
@@ -73,25 +74,27 @@ class TeamPage extends Component {
                     </div>
                     <div className="row top-row">
                         <div className="toggle-nav position-right-nav" onClick={this.getNavState}>
-                            <div className="nav-line-top"></div>
-                            <div className="nav-line-bottom"></div>
+                            <div className="nav-line-top"/>
+                            <div className="nav-line-bottom"/>
                         </div>
                     </div>
-                    <div className="row center-row">
-                        <img src={this.state.people[this.peIndex] ? this.state.people[this.peIndex].data.picture.reference_md : 'http://stasseynsjonas.be/api/profiles/placeholder.jpg'} className={'person-image persone-image-top swap-on-hover__front-image'} alt={'profile'} />
-                        <img src={this.state.people[this.peIndex] ? this.state.people[this.peIndex].data.picture_hoover.reference_md : 'http://stasseynsjonas.be/api/profiles/placeholder.jpg'} className={'person-image persone-image-top swap-on-hover__back-image'} alt={'profile'} />
-                        {this.peIndex === 0 ? '' : <p className="person-action-btn" onClick={this.prevPerson}><img src={arrow} alt="arrow" /></p>}
-                        <div className={'person-data-div'}>
-                            <h1 className={'person-name'}>{this.state.people[this.peIndex] ? this.state.people[this.peIndex].data.firstName + ' ' + this.state.people[this.peIndex].data.lastName : 'Rendering...'}</h1>
-                            <div className={'person-bar'}></div>
-                            <h3 className={'person-title'}>{this.state.people[this.peIndex] ? this.state.people[this.peIndex].data.jobTitle.title : 'Rendering...'}</h3>
+                    <FadeIn>
+                        <div className="row center-row">
+                            <img src={this.state.people[this.peIndex] ? this.state.people[this.peIndex].data.picture.reference_md : 'http://stasseynsjonas.be/api/profiles/placeholder.jpg'} className={'person-image persone-image-top swap-on-hover__front-image'} alt={'profile'} />
+                            <img src={this.state.people[this.peIndex] ? this.state.people[this.peIndex].data.picture_hoover.reference_md : 'http://stasseynsjonas.be/api/profiles/placeholder.jpg'} className={'person-image persone-image-top swap-on-hover__back-image'} alt={'profile'} />
+                            {this.peIndex === 0 ? '' : <p className="person-action-btn" onClick={this.prevPerson}><img src={arrow} alt="arrow" /></p>}
+                            <div className={'person-data-div'}>
+                                <h1 className={'person-name'}>{this.state.people[this.peIndex] ? this.state.people[this.peIndex].data.firstName + ' ' + this.state.people[this.peIndex].data.lastName : 'Loading...'}</h1>
+                                <div className={"person-bar"}/>
+                                <h3 className={'person-title'}>{this.state.people[this.peIndex] ? this.state.people[this.peIndex].data.jobTitle.title : 'Loading...'}</h3>
+                            </div>
                         </div>
-                    </div>
+                    </FadeIn>
                     <div className="row bottom-row">
                         {this.peIndex !== this.state.people.length - 1 ? <img src={this.state.people[this.peIndex + 1] ? this.state.people[this.peIndex + 1].data.picture.reference_md : 'http://stasseynsjonas.be/api/profiles/placeholder.jpg'} className={'person-image'} alt={'next-profile'} /> : ''}
                         {this.peIndex !== this.state.people.length - 1 ? <p className="person-action-btn" onClick={this.nextPerson}><img src={arrow} alt="arrow" className="flip-arrow" /></p> : ''}
                         <div className={'person-data-div'}>
-                            {/*<h2 className="person-cue">{this.state.people[this.peIndex + 1] ? this.state.people[this.peIndex + 1].name : 'Rendering...'}</h2>*/}
+                            {/*<h2 className="person-cue">{this.state.people[this.peIndex + 1] ? this.state.people[this.peIndex + 1].name : 'Loading...'}</h2>*/}
                         </div>
                     </div>
                 </div>
