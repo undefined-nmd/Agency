@@ -5,7 +5,6 @@ import "../styles/projects.css"
 import SEO from "../components/seo"
 import axios from 'axios'
 import ProjectDetailPage from "../components/projectdetailpage";
-import FadeIn from "react-fade-in";
 
 class ProjectsPage extends Component {
     state = {
@@ -38,7 +37,7 @@ class ProjectsPage extends Component {
     }
 
     componentDidMount() {
-        // Executing a GET request to the cloud functions REST api to get the projects
+        // Execute a GET request to the cloud functions REST api to get the projects
         axios.get('https://undefined-baas.firebaseapp.com/api/projects').then((snap) => {
             this.setState({
                 projects: snap.data.data
@@ -56,7 +55,7 @@ class ProjectsPage extends Component {
                     <Menu menustate={this.state.navActive} toggleNav={this.getNavState} />
                     <div className={'main-container-project-list'}>
                         {/* <a href="/#`" className="undefined-copyright-contact">_defined</a> */}
-                        <div className="toggle-nav-fix add-fixed reduce-width-float" onClick={this.getNavState}>
+                        <div className="toggle-nav reduce-width-float add-fixed" onClick={this.getNavState}>
                             <div className="nav-line-top" />
                             <div className="nav-line-bottom" />
                         </div>
@@ -79,9 +78,8 @@ class ProjectsPage extends Component {
         } else {
             return (
                 // Loading the projectdetailpage component while passing the data through props
-                <FadeIn>
-                    <ProjectDetailPage projecttitle={this.state.projectTitle} projectbody={this.state.projectBody} projectsynopsis={this.state.projectSynopsis} projectimages={this.state.projectImages} />
-                </FadeIn>
+                <ProjectDetailPage projecttitle={this.state.projectTitle} projectbody={this.state.projectBody} projectsynopsis={this.state.projectSynopsis} projectimages={this.state.projectImages}>
+                </ProjectDetailPage>
             )
         }
     }
