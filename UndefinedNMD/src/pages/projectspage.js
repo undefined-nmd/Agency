@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import Layout from "../components/layout"
+import Footer from "../components/footer"
 import Menu from '../components/menu'
 import "../styles/projects.css"
 import SEO from "../components/seo"
 import axios from 'axios'
 import ProjectDetailPage from "../components/projectdetailpage";
-import FadeIn from "react-fade-in";
 
 class ProjectsPage extends Component {
     state = {
@@ -38,7 +38,7 @@ class ProjectsPage extends Component {
     }
 
     componentDidMount() {
-        // Executing a GET request to the cloud functions REST api to get the projects
+        // Execute a GET request to the cloud functions REST api to get the projects
         axios.get('https://undefined-baas.firebaseapp.com/api/projects').then((snap) => {
             this.setState({
                 projects: snap.data.data
@@ -56,7 +56,7 @@ class ProjectsPage extends Component {
                     <Menu menustate={this.state.navActive} toggleNav={this.getNavState} />
                     <div className={'main-container-project-list'}>
                         {/* <a href="/#`" className="undefined-copyright-contact">_defined</a> */}
-                        <div className="toggle-nav-fix add-fixed reduce-width-float" onClick={this.getNavState}>
+                        <div className="toggle-nav reduce-width-float add-fixed" onClick={this.getNavState}>
                             <div className="nav-line-top" />
                             <div className="nav-line-bottom" />
                         </div>
@@ -67,21 +67,21 @@ class ProjectsPage extends Component {
                                     <h2 className="project-list-title">{item.data.title}</h2>
                                     <div className="project-list-row">
                                         <img src={item.data.images[0] ? item.data.images[0] : 'https://firebasestorage.googleapis.com/v0/b/undefined-baas.appspot.com/o/resized%2Ftumblr_n7jz4u5Fgd1ql2g28o1_500_1280x1280.jpg?alt=media&token=16672718-2b3c-493f-a1f0-f6cab1d8eaaa'} className="project-list-image" alt={'project-img'} />
-                                        <p className="action-button-page-section edit-height" onClick={() => this.setStateId(item)}>View project</p>
+                                        <p className="action-button-projects edit-height" onClick={() => this.setStateId(item)}>View project</p>
                                     </div>
                                     <p className="project-list-slug">{item.data.synopsis ? item.data.synopsis : ''}</p>
                                 </div>
                             )
                         })}
+                        <Footer style="footer-border" />
                     </div>
                 </Layout>
             );
         } else {
             return (
                 // Loading the projectdetailpage component while passing the data through props
-                <FadeIn>
-                    <ProjectDetailPage projecttitle={this.state.projectTitle} projectbody={this.state.projectBody} projectsynopsis={this.state.projectSynopsis} projectimages={this.state.projectImages} />
-                </FadeIn>
+                <ProjectDetailPage projecttitle={this.state.projectTitle} projectbody={this.state.projectBody} projectsynopsis={this.state.projectSynopsis} projectimages={this.state.projectImages}>
+                </ProjectDetailPage>
             )
         }
     }

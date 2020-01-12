@@ -74,6 +74,11 @@ nav a:hover {
     font-family: sans-serif;
 }
 
+main-container-edit {
+    padding: 0%;
+    margin: 120px 0px;
+}
+
 .project-intro {
     font-size: 200%;
     line-height: 50px;
@@ -83,6 +88,13 @@ nav a:hover {
 
 .content-box {
     margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.content-box-edit{
+    margin: 120px 0px;
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -147,7 +159,13 @@ nav a:hover {
 footer {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
+}
+
+.footer-border {
+    margin-bottom: 50px;
+    padding-top: 80px;
+    border-top: 1px solid rgb(213, 213, 213);
 }
 
 .footer-info-general {
