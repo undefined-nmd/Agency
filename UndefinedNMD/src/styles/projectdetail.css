@@ -74,11 +74,6 @@ nav a:hover {
     font-family: sans-serif;
 }
 
-main-container-edit {
-    padding: 0%;
-    margin: 120px 0px;
-}
-
 .project-intro {
     font-size: 200%;
     line-height: 50px;
@@ -88,13 +83,6 @@ main-container-edit {
 
 .content-box {
     margin-top: 120px;
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-}
-
-.content-box-edit{
-    margin: 120px 0px;
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -159,13 +147,7 @@ main-container-edit {
 footer {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 50px;
-}
-
-.footer-border {
-    margin-bottom: 50px;
-    padding-top: 80px;
-    border-top: 1px solid rgb(213, 213, 213);
+    margin-bottom: 100px;
 }
 
 .footer-info-general {

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Layout from "../components/layout"
-import Footer from "../components/footer"
 import "../styles/projectdetail.css"
 import SEO from "../components/seo"
 import Menu from '../components/menu'
@@ -71,7 +70,29 @@ class ProjectDetailPage extends Component {
             <p className="action-title">Let us define your next project</p>
             <a href="/contact" className="action-button-page-section">Contact us</a>
           </div>
-          <Footer />
+          <footer>
+            <div className="footer-container-left">
+              <h2>Contact</h2>
+              <ul>
+                <li className="footer-info-general">Hoogpoort 15</li>
+                <li className="footer-info-general">9000 Gent</li>
+                <li><a className="footer-info-general" href="mailto:info@arteveldehs.be">info@arteveldehs.be</a></li>
+                <li><a className="footer-info-general" href="tel:03292348600">09 234 86 00</a></li>
+              </ul>
+            </div>
+            <div className="footer-container-center">
+              <h2>Socials</h2>
+              <ul>
+                <li><a className="footer-info-general" target="blanc" href="https://www.instagram.com/undefinednmd/">Instagram </a></li>
+                <li><a className="footer-info-general" target="blanc" href="https://www.facebook.com/undefinednmd/"> Facebook </a></li>
+                <li><a className="footer-info-general" target="blanc" href="https://www.linkedin.com/in/undefined-nmd-122144194/"> LinkedIn </a></li>
+                <li><a className="footer-info-general" target="blanc" href="https://www.twitter.com/UNDEFIN78240322"> Twitter</a></li>
+              </ul>
+            </div>
+            <div className="blank"></div>
+            {/* <div className="undefined-copyright">_defined</div> */}
+            <a href="/#" className="home-btn">_defined</a>
+          </footer>
         </div>
       </Layout>
     )

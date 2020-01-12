@@ -161,10 +161,6 @@ form {
     z-index: 100;
 }
 
-.pos-right-abs {
-    right: 10%;
-}
-
 /* 900px */
 @media only screen and (max-width: 900px) {
     .contactinfo-general{

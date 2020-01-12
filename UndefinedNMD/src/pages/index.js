@@ -26,7 +26,7 @@ class IndexPage extends Component {
                         <div className={'hero-child'}>
                             <h1 className="project-title">Snek the museum</h1>
                             <div className={'subtitles'}>
-                                <h5 className={'subtitle-text'}>UX / UI</h5>
+                                <h5 className={'subtitle-text'}>View project</h5>
                                 <div className={'line'}></div>
                                 <h5 className={'date-text'}>2019</h5>
                             </div>
