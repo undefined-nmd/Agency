@@ -73,7 +73,7 @@ class TeamPage extends Component {
                         <Menu menustate={this.state.navActive} toggleNav={this.getNavState} />
                     </div>
                     <div className="row top-row">
-                        <div className="toggle-nav-contact reduce-width" onClick={this.getNavState}>
+                        <div className="toggle-nav reduce-width" onClick={this.getNavState}>
                             <div className="nav-line-top"></div>
                             <div className="nav-line-bottom"></div>
                         </div>
