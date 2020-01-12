@@ -57,7 +57,7 @@ class ProjectsPage extends Component {
                     <Menu menustate={this.state.navActive} toggleNav={this.getNavState} />
                     <div className={'main-container-project-list'}>
                         {/* <a href="/#`" className="undefined-copyright-contact">_defined</a> */}
-                        <div className="toggle-nav add-fixed projects-page-higher" onClick={this.getNavState}>
+                        <div className="toggle-nav-fix add-fixed reduce-width-float" onClick={this.getNavState}>
                             <div className="nav-line-top" />
                             <div className="nav-line-bottom" />
                         </div>
@@ -81,9 +81,9 @@ class ProjectsPage extends Component {
         } else {
             return (
                 // Loading the projectdetailpage component while passing the data through props
-              <FadeIn>
-                  <ProjectDetailPage projecttitle={this.state.projectTitle} projectbody={this.state.projectBody} projectsynopsis={this.state.projectSynopsis} projectimages={this.state.projectImages}/>
-              </FadeIn>
+                <FadeIn>
+                    <ProjectDetailPage projecttitle={this.state.projectTitle} projectbody={this.state.projectBody} projectsynopsis={this.state.projectSynopsis} projectimages={this.state.projectImages} />
+                </FadeIn>
             )
         }
     }

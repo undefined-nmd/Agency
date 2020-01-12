@@ -56,45 +56,61 @@
 }
 
 .toggle-nav {
+    height: 14px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-between;
     cursor: pointer;
-    width: 6vw;
-    height: 6vw;
+    width: 20%;
     background: rgb(243, 243, 243);
+    padding: 12% 9%;
     box-sizing: border-box;
-    border-radius: 50%;
-    padding: 1vw;
+    height: 75px;
+    border-radius: 50px;
+    width: 75px;
+}
 
+.toggle-nav-fix {
+    height: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+    width: 20%;
+    background: rgb(243, 243, 243);
+    padding: 1% 1%;
+    box-sizing: border-box;
+    height: 75px;
+    border-radius: 50px;
+    width: 75px;
+    align-items: center;
 }
 
 .nav-line-top {
     height: 1px;
-    width: 40px;
+    width: 30px;
     background-color: black;
     transition: 0.2s ease-in-out;
 }
 
 .nav-line-bottom {
     height: 1px;
-    width: 20px;
+    width: 30px;
     background-color: black;
     transition: 0.2s ease-in-out;
 }
 
-.toggle-nav:hover .nav-line-top {
+.toggle-nav:hover .nav-line-top, .toggle-nav-fix:hover .nav-line-top {
     transform: scaleX(0.7);
     transition: 0.2s ease-in-out;
 }
 
-.toggle-nav:hover .nav-line-bottom {
+.toggle-nav:hover .nav-line-bottom, .toggle-nav-fix:hover .nav-line-bottom {
     transform: scaleX(1.5);
     transition: 0.2s ease-in-out;
 }
 
-.toggle-nav:hover .reduce-width-float {
+.toggle-nav:hover .reduce-width-float, .toggle-nav-fix:hover .reduce-width-float {
     padding: 2% 0% !important;
     z-index: 100;
 }
@@ -212,10 +228,6 @@ span{
 /* responsive 900px */
 @media only screen and (max-width: 900px) {
 
-    .content-child {
-       margin-top: 10%;
-    }
-
     .position-right-nav{
         position: absolute;
         top: 10px;
@@ -228,7 +240,7 @@ span{
     }
 
     .toggle-nav{
-        /*width: auto;*/
+        width: auto;
     }
 
     .container {
@@ -253,7 +265,7 @@ span{
     }
 
     .brand-title {
-        font-size: 9vh;
+        font-size: 12vh;
     }
 
     .project-title {
