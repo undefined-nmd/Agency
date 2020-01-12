@@ -212,6 +212,10 @@ span{
 /* responsive 900px */
 @media only screen and (max-width: 900px) {
 
+    .content-child {
+       margin-top: 10%;
+    }
+
     .position-right-nav{
         position: absolute;
         top: 10px;
@@ -249,7 +253,7 @@ span{
     }
 
     .brand-title {
-        font-size: 12vh;
+        font-size: 9vh;
     }
 
     .project-title {

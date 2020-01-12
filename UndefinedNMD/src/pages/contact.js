@@ -70,7 +70,7 @@ class ContactPage extends Component {
         <SEO title="Contact" />
         <Menu menustate={this.state.navActive} toggleNav={this.getNavState} />
         <div className={'contact-container'}>
-          <div className="toggle-nav reduce-width-float" onClick={this.getNavState}>
+          <div className="toggle-nav reduce-width-float pos-right-abs" onClick={this.getNavState}>
             <div className="nav-line-top"></div>
             <div className="nav-line-bottom"></div>
           </div>

@@ -34,6 +34,30 @@
     overflow: hidden;
 }
 
+.toggle-nav-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    background: rgb(243, 243, 243);
+    padding: 2% 0%;
+    box-sizing: border-box;
+    height: 65px;
+    border-radius: 50px;
+    width: 65px;
+    align-items: center;
+}
+
+.toggle-nav-contact:hover .nav-line-bottom {
+    transform: scaleX(1.5);
+    transition: 0.2s ease-in-out;
+}
+
+.toggle-nav-contact:hover .nav-line-top {
+    transform: scaleX(0.7);
+    transition: 0.2s ease-in-out;
+}
+
 .person-image-top,
 .person-image {
     width: 45%;
