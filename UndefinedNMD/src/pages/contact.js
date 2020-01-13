@@ -71,8 +71,10 @@ class ContactPage extends Component {
         <Menu menustate={this.state.navActive} toggleNav={this.getNavState} />
         <div className={'contact-container'}>
           <div className="toggle-nav reduce-width-float pos-right-abs" onClick={this.getNavState}>
-            <div className="nav-line-top"></div>
-            <div className="nav-line-bottom"></div>
+            <div className="toggle-nav-child-cont">
+              <div className="nav-line-top"></div>
+              <div className="nav-line-bottom"></div>
+            </div>
           </div>
           <div className={'contactinfo'}>
             <div className={'contactinfo-contact'}>

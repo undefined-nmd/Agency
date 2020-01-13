@@ -36,8 +36,10 @@ class IndexPage extends Component {
                     <div className={'content-div'}>
                         <div className={'content-child'}>
                             <div className="toggle-nav position-right-nav" onClick={this.getNavState}>
-                                <div className="nav-line-top"></div>
-                                <div className="nav-line-bottom"></div>
+                                <div className="toggle-nav-child-cont">
+                                    <div className="nav-line-top"></div>
+                                    <div className="nav-line-bottom"></div>
+                                </div>
                             </div>
                             <h2 className="brand-title">_defined</h2>
                             <h4 className="baseline">We <span>Build</span> <span>Digital</span> <span>Stuff</span></h4>

@@ -30,8 +30,10 @@ class ProjectDetailPage extends Component {
         <Menu menustate={this.state.navActive} toggleNav={this.getNavState} />
         <div className="fixed-div">
           <div className="toggle-nav reduce-width-float" onClick={this.getNavState}>
-            <div className="nav-line-top" />
-            <div className="nav-line-bottom" />
+            <div className="toggle-nav-child-cont">
+              <div className="nav-line-top"></div>
+              <div className="nav-line-bottom"></div>
+            </div>
           </div>
         </div>
         <div className="header-container">

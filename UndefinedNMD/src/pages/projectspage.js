@@ -57,8 +57,10 @@ class ProjectsPage extends Component {
                     <div className={'main-container-project-list'}>
                         {/* <a href="/#`" className="undefined-copyright-contact">_defined</a> */}
                         <div className="toggle-nav reduce-width-float add-fixed" onClick={this.getNavState}>
-                            <div className="nav-line-top" />
-                            <div className="nav-line-bottom" />
+                            <div className="toggle-nav-child-cont">
+                                <div className="nav-line-top"></div>
+                                <div className="nav-line-bottom"></div>
+                            </div>
                         </div>
                         {this.state && this.state.projects && this.state.projects.map((item, index) => {
                             // Mapping the project thumbnails/previews

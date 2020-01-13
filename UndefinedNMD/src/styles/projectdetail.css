@@ -209,7 +209,10 @@ span.footer-info-general {
 @media only screen and (max-width: 900px) {
     .content-box {
         width: 100%;
-        text-align: justify;
+    }
+
+    .content-box-edit {
+        width: 100%;
     }
 
     .image-container img{
@@ -224,5 +227,12 @@ span.footer-info-general {
 
     .footer-info-general {
         font-size: 100%;
+    }
+  }
+
+
+  @media only screen and (max-width: 900px) {
+    .fixed-div {
+        margin-right: 50px;
     }
   }

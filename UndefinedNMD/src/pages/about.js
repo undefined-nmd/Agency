@@ -41,8 +41,10 @@ class About extends Component {
                 <div className={'contact-container'}>
                     <div className="main-container-edit">
                         <div className="toggle-nav reduce-width-float add-fixed" onClick={this.getNavState}>
-                            <div className="nav-line-top"></div>
-                            <div className="nav-line-bottom"></div>
+                            <div className="toggle-nav-child-cont">
+                                <div className="nav-line-top"></div>
+                                <div className="nav-line-bottom"></div>
+                            </div>
                         </div>
                         <p className="project-intro">
                             {this.state.content[0] ? this.state.content[0].data.synopsis : 'Rendering...'}
