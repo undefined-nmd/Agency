@@ -108,3 +108,37 @@
     position: absolute;
     right: 10%;
 }
+
+@media only screen and (max-width: 900px) {
+    .project-list-row {
+        flex-direction: column;
+    }
+    
+    .project-list-image {
+        width: 100%;
+    }
+    
+    .action-button-projects {
+        position: static;
+    }
+
+    .project-list-slug {
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+   .footer-container-left, .footer-container-center {
+       margin-bottom: 25px;
+   }
+
+   .blank {
+        border-bottom: 1px solid rgb(213, 213, 213);
+   }
+   .home-btn {
+    margin-top: 50px !important;
+   }
+
+  }
